@@ -4,7 +4,8 @@ import kotlin.math.pow
 
 fun main() {
     val nums = 5..50
-    nums.forEach { println(it) }
+    nums.forEach { print("$it ") }
+    println()
     println()
 
     println("Minimum: ")
@@ -23,7 +24,7 @@ fun main() {
     val cubicNums = nums.map { it * it * it }
     // other way to do using pow() fun
     //val cubicNums = nums.map { it.toDouble().pow(3).toInt() }
-    cubicNums.forEach { println(it) }
+    cubicNums.forEach { print("$it ") }
 }
 
 fun min(range: IntRange) = range.min()

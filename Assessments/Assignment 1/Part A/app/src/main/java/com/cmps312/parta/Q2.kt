@@ -1,7 +1,7 @@
 package com.cmps312.parta
 
 fun main() {
-    println(getLetterGrade(80))
+    println(getLetterGrade(99))
 }
 
 fun getLetterGrade(score: Int): String = when (score) {
