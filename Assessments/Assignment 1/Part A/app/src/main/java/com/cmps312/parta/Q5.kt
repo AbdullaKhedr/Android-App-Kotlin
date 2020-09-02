@@ -3,7 +3,6 @@ package com.cmps312.parta
 import kotlin.math.pow
 
 fun main() {
-
     val nums = 5..50
     nums.forEach { println(it) }
     println()
@@ -25,21 +24,12 @@ fun main() {
     // other way to do using pow() fun
     //val cubicNums = nums.map { it.toDouble().pow(3).toInt() }
     cubicNums.forEach { println(it) }
-
 }
 
-fun min(range: IntRange): Int? {
-    return range.min()
-}
+fun min(range: IntRange) = range.min()
 
-fun max(range: IntRange): Int? {
-    return range.max()
-}
+fun max(range: IntRange) = range.max()
 
-fun sum(range: IntRange): Int? {
-    return range.reduce { sum, e -> sum + e }
-}
+fun sum(range: IntRange) = range.reduce { sum, e -> sum + e }
 
-fun average(range: IntRange): Double? {
-    return sum(range)?.toDouble()?.div(range.count())
-}
+fun average(range: IntRange) = sum(range).div(range.count())
