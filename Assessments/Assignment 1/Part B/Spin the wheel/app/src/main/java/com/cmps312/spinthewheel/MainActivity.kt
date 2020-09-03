@@ -26,8 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         spinBtn.setOnClickListener {
             if (winners.isNotEmpty()) {
-                var i = Random.nextInt(0, winners.size)
-                winnerEdt.text = "The Winner is ${winners[i]}"
+                winnerEdt.text = "The Winner is ${winners.shuffled().first()}"
             } else {
                 Toast.makeText(this, "No names to choose from!", Toast.LENGTH_SHORT).show()
             }
