@@ -16,5 +16,4 @@ fun main() {
     CovidStatRepository.topThreeRecoveryRegionsInAContinent("Asia")
     println("--------------------------------------------------------------------------------------------")
     CovidStatRepository.lowestDeathInAContinent("Asia")
-    
 }
