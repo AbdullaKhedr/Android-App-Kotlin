@@ -6,5 +6,6 @@ import kotlinx.serialization.Serializable
 data class Stadium(
     val name: String,
     val city: String,
-    val status: String
+    val status: String,
+    val image: String
 )

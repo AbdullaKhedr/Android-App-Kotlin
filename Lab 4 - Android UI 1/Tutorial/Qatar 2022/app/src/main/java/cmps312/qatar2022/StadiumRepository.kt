@@ -8,7 +8,6 @@ import java.io.File
 object StadiumRepository {
 
     var stadiums = listOf<Stadium>()
-    val count: Int get() = stadiums.size
 
     fun initStadiums(context: Context): List<Stadium> {
         if (stadiums.isEmpty()) {
@@ -23,5 +22,4 @@ object StadiumRepository {
         }
         return stadiums
     }
-
 }

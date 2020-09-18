@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">متتبع كوفيد</string>
+    <string name="active_cases">الحالات النشطة</string>
+    <string name="total_recoverd">إجمالي المتعافين</string>
+    <string name="total_deths">إجمالي الوفيات</string>
+    <string name="population">تعداد السكان</string>
+    <string name="country_name">اسم الدولة</string>
+    <string name="arabic">العربية</string>
+    <string name="english">الإنجليزية</string>
+    <string name="search">بحث</string>
+    <string name="by_total_deaths">حسب إجمالي الوفيات</string>
+    <string name="by_population">حسب تعداد السكان</string>
+    <string name="by_active_cases">حسب الحالات النشطة</string>
+    <string name="by_country">حسب الدولة</string>
+    <string name="sort_data">فرز البيانات</string>
+    <string name="language">اللغة</string>
+</resources>

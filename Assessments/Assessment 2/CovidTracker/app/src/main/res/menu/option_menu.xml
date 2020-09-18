@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:orderInCategory="100"
+        android:title="@string/sort_data"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/sort_by_country"
+                android:orderInCategory="200"
+                android:title="@string/by_country"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/sort_by_active_cases"
+                android:orderInCategory="200"
+                android:title="@string/by_active_cases"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/sort_by_population"
+                android:orderInCategory="200"
+                android:title="@string/by_population"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/sort_by_total_deaths"
+                android:orderInCategory="200"
+                android:title="@string/by_total_deaths"
+                app:showAsAction="never" />
+        </menu>
+
+    </item>
+
+    <item
+        android:orderInCategory="100"
+        android:title="@string/language"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/arabic_lang"
+                android:orderInCategory="200"
+                android:title="@string/arabic"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/english_lang"
+                android:orderInCategory="200"
+                android:title="@string/english"
+                app:showAsAction="never" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/app_bar_option_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom" />
+</menu>
