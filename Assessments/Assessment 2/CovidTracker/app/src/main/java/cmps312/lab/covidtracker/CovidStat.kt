@@ -36,6 +36,6 @@ data class CovidStat(
     var totalTests: Int?,
     var testsPer1M: Int?,
     var population: Int?,
-    var code: String
+    var code: String // flag image code
 )
 

@@ -12,4 +12,5 @@
     <string name="by_active_cases">حسب الحالات النشطة</string>
     <string name="by_country">حسب الدولة</string>
     <string name="sort_data">فرز البيانات</string>
+    <string name="toolbar_sutitle">إحصاءات العالم</string>
 </resources>

@@ -6,6 +6,7 @@
     <string name="population">Population</string>
     <string name="country_name">Country Name</string>
     <string name="search">Search...</string>
+    <string name="toolbar_sutitle">World Statistics</string>
     <string name="by_total_deaths">By Total Deaths</string>
     <string name="by_population">By Population</string>
     <string name="by_active_cases">By Active Cases</string>
