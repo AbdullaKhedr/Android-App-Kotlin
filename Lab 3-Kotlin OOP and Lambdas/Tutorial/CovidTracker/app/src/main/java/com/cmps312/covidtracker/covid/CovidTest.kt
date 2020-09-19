@@ -1,6 +1,7 @@
 package com.cmps312.covidtracker.covid
 
 fun main() {
+
     CovidStatRepository.totalDeathsInQatar()
     println("--------------------------------------------------------------------------------------------")
     CovidStatRepository.worldTotalDeaths()
@@ -16,5 +17,4 @@ fun main() {
     CovidStatRepository.topThreeRecoveryRegionsInAContinent("Asia")
     println("--------------------------------------------------------------------------------------------")
     CovidStatRepository.lowestDeathInAContinent("Asia")
-    
 }

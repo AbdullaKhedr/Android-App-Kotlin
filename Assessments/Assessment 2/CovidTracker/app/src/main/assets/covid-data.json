@@ -16,7 +16,8 @@
     "deathsPer1M": 567,
     "totalTests": 82624841,
     "testsPer1M": 249373,
-    "population": 331330464
+    "population": 331330464,
+    "code": "US"
   },
   {
     "id": 2,
@@ -35,7 +36,8 @@
     "deathsPer1M": 571,
     "totalTests": 14352484,
     "testsPer1M": 67442,
-    "population": 212813742
+    "population": 212813742,
+    "code": "BR"
   },
   {
     "id": 3,
@@ -54,7 +56,8 @@
     "deathsPer1M": 47,
     "totalTests": 42307914,
     "testsPer1M": 30608,
-    "population": 1382271004
+    "population": 1382271004,
+    "code": "IN"
   },
   {
     "id": 4,
@@ -73,7 +76,8 @@
     "deathsPer1M": 118,
     "totalTests": 36696382,
     "testsPer1M": 251439,
-    "population": 145945183
+    "population": 145945183,
+    "code": "RU"
   },
   {
     "id": 5,
@@ -92,7 +96,8 @@
     "deathsPer1M": 876,
     "totalTests": 3215842,
     "testsPer1M": 97309,
-    "population": 33047700
+    "population": 33047700,
+    "code": "PE"
   },
   {
     "id": 6,
@@ -111,7 +116,8 @@
     "deathsPer1M": 238,
     "totalTests": 3693721,
     "testsPer1M": 62150,
-    "population": 59432639
+    "population": 59432639,
+    "code": "ZA"
   },
   {
     "id": 7,
@@ -130,7 +136,8 @@
     "deathsPer1M": 386,
     "totalTests": 2746217,
     "testsPer1M": 53876,
-    "population": 50973286
+    "population": 50973286,
+    "code": "CO"
   },
   {
     "id": 8,
@@ -149,7 +156,8 @@
     "deathsPer1M": 497,
     "totalTests": 1340466,
     "testsPer1M": 10378,
-    "population": 129158631
+    "population": 129158631,
+    "code": "MX"
   },
   {
     "id": 9,
@@ -168,7 +176,8 @@
     "deathsPer1M": 622,
     "totalTests": 9210337,
     "testsPer1M": 196979,
-    "population": 46757881
+    "population": 46757881,
+    "code": "ES"
   },
   {
     "id": 10,
@@ -187,7 +196,8 @@
     "deathsPer1M": 191,
     "totalTests": 1257906,
     "testsPer1M": 27790,
-    "population": 45265185
+    "population": 45265185,
+    "code": "AR"
   },
   {
     "id": 11,
@@ -206,7 +216,8 @@
     "deathsPer1M": 590,
     "totalTests": 2432436,
     "testsPer1M": 127062,
-    "population": 19143709
+    "population": 19143709,
+    "code": "CL"
   },
   {
     "id": 12,
@@ -225,7 +236,8 @@
     "deathsPer1M": 256,
     "totalTests": 3231110,
     "testsPer1M": 38387,
-    "population": 84171055
+    "population": 84171055,
+    "code": "IR"
   },
   {
     "id": 13,
@@ -244,7 +256,8 @@
     "deathsPer1M": 611,
     "totalTests": 16273209,
     "testsPer1M": 239501,
-    "population": 67946337
+    "population": 67946337,
+    "code": "GB"
   },
   {
     "id": 14,
@@ -263,7 +276,8 @@
     "deathsPer1M": 112,
     "totalTests": 5026127,
     "testsPer1M": 144003,
-    "population": 34902978
+    "population": 34902978,
+    "code": "SA"
   },
   {
     "id": 15,
@@ -282,7 +296,8 @@
     "deathsPer1M": 26,
     "totalTests": 1550203,
     "testsPer1M": 9397,
-    "population": 164963389
+    "population": 164963389,
+    "code": "BD"
   },
   {
     "id": 16,
@@ -301,7 +316,8 @@
     "deathsPer1M": 28,
     "totalTests": 2621146,
     "testsPer1M": 11829,
-    "population": 221589309
+    "population": 221589309,
+    "code": "PK"
   },
   {
     "id": 17,
@@ -320,7 +336,8 @@
     "deathsPer1M": 469,
     "totalTests": 6461460,
     "testsPer1M": 98953,
-    "population": 65298143
+    "population": 65298143,
+    "code": "FR"
   },
   {
     "id": 18,
@@ -339,7 +356,8 @@
     "deathsPer1M": 75,
     "totalTests": 7138492,
     "testsPer1M": 84489,
-    "population": 84490286
+    "population": 84490286,
+    "code": "TR"
   },
   {
     "id": 19,
@@ -358,7 +376,8 @@
     "deathsPer1M": 587,
     "totalTests": 8644859,
     "testsPer1M": 143017,
-    "population": 60446519
+    "population": 60446519,
+    "code": "IT"
   },
   {
     "id": 20,
@@ -377,7 +396,8 @@
     "deathsPer1M": 112,
     "totalTests": 11208091,
     "testsPer1M": 133701,
-    "population": 83829512
+    "population": 83829512,
+    "code": "DE"
   },
   {
     "id": 21,
@@ -396,7 +416,8 @@
     "deathsPer1M": 174,
     "totalTests": 1605904,
     "testsPer1M": 39782,
-    "population": 40367827
+    "population": 40367827,
+    "code": "IQ"
   },
   {
     "id": 22,
@@ -415,7 +436,8 @@
     "deathsPer1M": 32,
     "totalTests": 2591819,
     "testsPer1M": 23600,
-    "population": 109822354
+    "population": 109822354,
+    "code": "PH"
   },
   {
     "id": 23,
@@ -434,7 +456,8 @@
     "deathsPer1M": 27,
     "totalTests": 2224337,
     "testsPer1M": 8118,
-    "population": 274005809
+    "population": 274005809,
+    "code": "ID"
   },
   {
     "id": 24,
@@ -453,7 +476,8 @@
     "deathsPer1M": 241,
     "totalTests": 5504392,
     "testsPer1M": 145628,
-    "population": 37797601
+    "population": 37797601,
+    "code": "CA"
   },
   {
     "id": 25,
@@ -472,7 +496,8 @@
     "deathsPer1M": 59,
     "totalTests": 1550280,
     "testsPer1M": 35485,
-    "population": 43688006
+    "population": 43688006,
+    "code": "UA"
   },
   {
     "id": 26,
@@ -491,7 +516,8 @@
     "deathsPer1M": 70,
     "totalTests": 629831,
     "testsPer1M": 224314,
-    "population": 2807805
+    "population": 2807805,
+    "code": "QA"
   },
   {
     "id": 27,
@@ -510,7 +536,8 @@
     "deathsPer1M": 102,
     "totalTests": 2295951,
     "testsPer1M": 249625,
-    "population": 9197590
+    "population": 9197590,
+    "code": "PS"
   },
   {
     "id": 28,
@@ -529,7 +556,8 @@
     "deathsPer1M": 424,
     "totalTests": 239640,
     "testsPer1M": 20483,
-    "population": 11699337
+    "population": 11699337,
+    "code": "BO"
   },
   {
     "id": 29,
@@ -548,7 +576,8 @@
     "deathsPer1M": 371,
     "totalTests": 328929,
     "testsPer1M": 18597,
-    "population": 17687134
+    "population": 17687134,
+    "code": "EC"
   },
   {
     "id": 30,
@@ -567,7 +596,8 @@
     "deathsPer1M": 81,
     "totalTests": 2434444,
     "testsPer1M": 129395,
-    "population": 18814004
+    "population": 18814004,
+    "code": "KZ"
   },
   {
     "id": 31,
@@ -586,7 +616,8 @@
     "deathsPer1M": 53,
     "totalTests": 135000,
     "testsPer1M": 1315,
-    "population": 102648563
+    "population": 102648563,
+    "code": "EG"
   },
   {
     "id": 32,
@@ -605,7 +636,8 @@
     "deathsPer1M": 157,
     "totalTests": 370875,
     "testsPer1M": 34131,
-    "population": 10866073
+    "population": 10866073,
+    "code": "DO"
   },
   {
     "id": 33,
@@ -624,7 +656,8 @@
     "deathsPer1M": 463,
     "totalTests": 339893,
     "testsPer1M": 78571,
-    "population": 4325925
+    "population": 4325925,
+    "code": "PA"
   },
   {
     "id": 34,
@@ -643,7 +676,8 @@
     "deathsPer1M": 188,
     "totalTests": 1802946,
     "testsPer1M": 93829,
-    "population": 19215305
+    "population": 19215305,
+    "code": "RO"
   },
   {
     "id": 35,
@@ -662,7 +696,8 @@
     "deathsPer1M": 134,
     "totalTests": 309212,
     "testsPer1M": 60306,
-    "population": 5127346
+    "population": 5127346,
+    "code": "OM"
   },
   {
     "id": 36,
@@ -681,7 +716,8 @@
     "deathsPer1M": 124,
     "totalTests": 617619,
     "testsPer1M": 144271,
-    "population": 4280975
+    "population": 4280975,
+    "code": "KW"
   },
   {
     "id": 37,
@@ -700,7 +736,8 @@
     "deathsPer1M": 3,
     "totalTests": 90410000,
     "testsPer1M": 62814,
-    "population": 1439323776
+    "population": 1439323776,
+    "code": "CN"
   },
   {
     "id": 38,
@@ -719,7 +756,8 @@
     "deathsPer1M": 853,
     "totalTests": 2278713,
     "testsPer1M": 196472,
-    "population": 11598176
+    "population": 11598176,
+    "code": "BE"
   },
   {
     "id": 39,
@@ -738,7 +776,8 @@
     "deathsPer1M": 574,
     "totalTests": 1094856,
     "testsPer1M": 108296,
-    "population": 10109890
+    "population": 10109890,
+    "code": "SE"
   },
   {
     "id": 40,
@@ -757,7 +796,8 @@
     "deathsPer1M": 154,
     "totalTests": 242502,
     "testsPer1M": 13495,
-    "population": 17969568
+    "population": 17969568,
+    "code": "GT"
   },
   {
     "id": 41,
@@ -776,7 +816,8 @@
     "deathsPer1M": 72,
     "totalTests": 1532119,
     "testsPer1M": 162150,
-    "population": 9448789
+    "population": 9448789,
+    "code": "BY"
   },
   {
     "id": 42,
@@ -795,7 +836,8 @@
     "deathsPer1M": 363,
     "totalTests": 1455274,
     "testsPer1M": 84899,
-    "population": 17141338
+    "population": 17141338,
+    "code": "NL"
   },
   {
     "id": 43,
@@ -814,7 +856,8 @@
     "deathsPer1M": 39,
     "totalTests": 7094658,
     "testsPer1M": 715892,
-    "population": 9910239
+    "population": 9910239,
+    "code": "AE"
   },
   {
     "id": 44,
@@ -833,7 +876,8 @@
     "deathsPer1M": 10,
     "totalTests": 1467132,
     "testsPer1M": 11606,
-    "population": 126409529
+    "population": 126409529,
+    "code": "JP"
   },
   {
     "id": 45,
@@ -852,7 +896,8 @@
     "deathsPer1M": 54,
     "totalTests": 2714027,
     "testsPer1M": 71725,
-    "population": 37839481
+    "population": 37839481,
+    "code": "PL"
   },
   {
     "id": 46,
@@ -871,7 +916,8 @@
     "deathsPer1M": 31,
     "totalTests": 1934334,
     "testsPer1M": 52303,
-    "population": 36983234
+    "population": 36983234,
+    "code": "MA"
   },
   {
     "id": 47,
@@ -890,7 +936,8 @@
     "deathsPer1M": 187,
     "totalTests": 143807,
     "testsPer1M": 14481,
-    "population": 9930472
+    "population": 9930472,
+    "code": "HN"
   },
   {
     "id": 48,
@@ -909,7 +956,8 @@
     "deathsPer1M": 179,
     "totalTests": 1976482,
     "testsPer1M": 193933,
-    "population": 10191571
+    "population": 10191571,
+    "code": "PT"
   },
   {
     "id": 49,
@@ -928,7 +976,8 @@
     "deathsPer1M": 5,
     "totalTests": 1832813,
     "testsPer1M": 312870,
-    "population": 5858071
+    "population": 5858071,
+    "code": "SG"
   },
   {
     "id": 50,
@@ -947,7 +996,8 @@
     "deathsPer1M": 5,
     "totalTests": 403347,
     "testsPer1M": 1949,
-    "population": 206956343
+    "population": 206956343,
+    "code": "NG"
   },
   {
     "id": 51,
@@ -966,7 +1016,8 @@
     "deathsPer1M": 7,
     "totalTests": 910293,
     "testsPer1M": 7887,
-    "population": 115418836
+    "population": 115418836,
+    "code": "ET"
   },
   {
     "id": 52,
@@ -985,7 +1036,8 @@
     "deathsPer1M": 111,
     "totalTests": 1108088,
     "testsPer1M": 647727,
-    "population": 1710732
+    "population": 1710732,
+    "code": "BH"
   },
   {
     "id": 53,
@@ -1004,7 +1056,8 @@
     "deathsPer1M": 14,
     "totalTests": 1766576,
     "testsPer1M": 62155,
-    "population": 28422020
+    "population": 28422020,
+    "code": "VE"
   },
   {
     "id": 54,
@@ -1023,7 +1076,8 @@
     "deathsPer1M": 34,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 43980236
+    "population": 43980236,
+    "code": "DZ"
   },
   {
     "id": 55,
@@ -1042,7 +1096,8 @@
     "deathsPer1M": 9,
     "totalTests": 442185,
     "testsPer1M": 14183,
-    "population": 31177877
+    "population": 31177877,
+    "code": "GH"
   },
   {
     "id": 56,
@@ -1061,7 +1116,8 @@
     "deathsPer1M": 162,
     "totalTests": 267718,
     "testsPer1M": 40924,
-    "population": 6541838
+    "population": 6541838,
+    "code": "KG"
   },
   {
     "id": 57,
@@ -1080,7 +1136,8 @@
     "deathsPer1M": 297,
     "totalTests": 205940,
     "testsPer1M": 69476,
-    "population": 2964188
+    "population": 2964188,
+    "code": "AM"
   },
   {
     "id": 58,
@@ -1099,7 +1156,8 @@
     "deathsPer1M": 231,
     "totalTests": 1015686,
     "testsPer1M": 117213,
-    "population": 8665269
+    "population": 8665269,
+    "code": "CH"
   },
   {
     "id": 59,
@@ -1118,7 +1176,8 @@
     "deathsPer1M": 10,
     "totalTests": 1377915,
     "testsPer1M": 41072,
-    "population": 33549173
+    "population": 33549173,
+    "code": "UZ"
   },
   {
     "id": 60,
@@ -1137,7 +1196,8 @@
     "deathsPer1M": 85,
     "totalTests": 150106,
     "testsPer1M": 29422,
-    "population": 5101904
+    "population": 5101904,
+    "code": "CR"
   },
   {
     "id": 61,
@@ -1156,7 +1216,8 @@
     "deathsPer1M": 8,
     "totalTests": 693472,
     "testsPer1M": 23731,
-    "population": 29222328
+    "population": 29222328,
+    "code": "NP"
   },
   {
     "id": 62,
@@ -1175,7 +1236,8 @@
     "deathsPer1M": 36,
     "totalTests": 102643,
     "testsPer1M": 2627,
-    "population": 39069477
+    "population": 39069477,
+    "code": "AF"
   },
   {
     "id": 63,
@@ -1194,7 +1256,8 @@
     "deathsPer1M": 247,
     "totalTests": 207925,
     "testsPer1M": 51564,
-    "population": 4032345
+    "population": 4032345,
+    "code": "MD"
   },
   {
     "id": 64,
@@ -1213,7 +1276,8 @@
     "deathsPer1M": 53,
     "totalTests": 922069,
     "testsPer1M": 90804,
-    "population": 10154479
+    "population": 10154479,
+    "code": "AZ"
   },
   {
     "id": 65,
@@ -1232,7 +1296,8 @@
     "deathsPer1M": 11,
     "totalTests": 454406,
     "testsPer1M": 8421,
-    "population": 53962251
+    "population": 53962251,
+    "code": "KE"
   },
   {
     "id": 66,
@@ -1251,26 +1316,8 @@
     "deathsPer1M": 82,
     "totalTests": 931037,
     "testsPer1M": 106632,
-    "population": 8731272
-  },
-  {
-    "id": 67,
-    "country": "Ireland",
-    "continent": "Europe",
-    "region": "Northern Europe",
-    "totalCases": 28811,
-    "newCases": 53,
-    "totalDeaths": 1777,
-    "newDeaths": 6,
-    "totalRecovered": 23364,
-    "newRecovered": 10,
-    "activeCases": 3670,
-    "criticalCases": 6,
-    "casesPer1M": 5824,
-    "deathsPer1M": 359,
-    "totalTests": 839814,
-    "testsPer1M": 169763,
-    "population": 4946966
+    "population": 8731272,
+    "code": "RS"
   },
   {
     "id": 68,
@@ -1289,7 +1336,8 @@
     "deathsPer1M": 81,
     "totalTests": 1180711,
     "testsPer1M": 130971,
-    "population": 9015081
+    "population": 9015081,
+    "code": "AT"
   },
   {
     "id": 69,
@@ -1308,7 +1356,8 @@
     "deathsPer1M": 26,
     "totalTests": 6214006,
     "testsPer1M": 243219,
-    "population": 25549067
+    "population": 25549067,
+    "code": "AU"
   },
   {
     "id": 70,
@@ -1327,7 +1376,8 @@
     "deathsPer1M": 110,
     "totalTests": 315320,
     "testsPer1M": 48572,
-    "population": 6491745
+    "population": 6491745,
+    "code": "SV"
   },
   {
     "id": 71,
@@ -1346,7 +1396,8 @@
     "deathsPer1M": 40,
     "totalTests": 901751,
     "testsPer1M": 84178,
-    "population": 10712372
+    "population": 10712372,
+    "code": "CZ"
   },
   {
     "id": 72,
@@ -1365,7 +1416,8 @@
     "deathsPer1M": 30,
     "totalTests": 263288,
     "testsPer1M": 51419,
-    "population": 5120462
+    "population": 5120462,
+    "code": "PS"
   },
   {
     "id": 73,
@@ -1384,7 +1436,8 @@
     "deathsPer1M": 186,
     "totalTests": 186532,
     "testsPer1M": 56917,
-    "population": 3277263
+    "population": 3277263,
+    "code": "BA"
   },
   {
     "id": 74,
@@ -1403,7 +1456,8 @@
     "deathsPer1M": 6,
     "totalTests": 1937689,
     "testsPer1M": 37789,
-    "population": 51276736
+    "population": 51276736,
+    "code": "KR"
   },
   {
     "id": 75,
@@ -1422,7 +1476,8 @@
     "deathsPer1M": 15,
     "totalTests": 149000,
     "testsPer1M": 5591,
-    "population": 26651461
+    "population": 26651461,
+    "code": "CM"
   },
   {
     "id": 76,
@@ -1441,7 +1496,8 @@
     "deathsPer1M": 4,
     "totalTests": 127804,
     "testsPer1M": 4826,
-    "population": 26482702
+    "population": 26482702,
+    "code": "CI"
   },
   {
     "id": 77,
@@ -1460,7 +1516,8 @@
     "deathsPer1M": 46,
     "totalTests": 192465,
     "testsPer1M": 26929,
-    "population": 7147074
+    "population": 7147074,
+    "code": "PY"
   },
   {
     "id": 78,
@@ -1479,7 +1536,8 @@
     "deathsPer1M": 24,
     "totalTests": 525556,
     "testsPer1M": 77059,
-    "population": 6820142
+    "population": 6820142,
+    "code": "LB"
   },
   {
     "id": 79,
@@ -1498,7 +1556,8 @@
     "deathsPer1M": 108,
     "totalTests": 2463008,
     "testsPer1M": 424974,
-    "population": 5795669
+    "population": 5795669,
+    "code": "DK"
   },
   {
     "id": 80,
@@ -1517,7 +1576,8 @@
     "deathsPer1M": 91,
     "totalTests": 409013,
     "testsPer1M": 58942,
-    "population": 6939302
+    "population": 6939302,
+    "code": "BG"
   },
   {
     "id": 81,
@@ -1536,7 +1596,8 @@
     "deathsPer1M": 7,
     "totalTests": 57927,
     "testsPer1M": 2083,
-    "population": 27804492
+    "population": 27804492,
+    "code": "MG"
   },
   {
     "id": 82,
@@ -1555,7 +1616,8 @@
     "deathsPer1M": 289,
     "totalTests": 148269,
     "testsPer1M": 71168,
-    "population": 2083359
+    "population": 2083359,
+    "code": "MK"
   },
   {
     "id": 83,
@@ -1574,7 +1636,8 @@
     "deathsPer1M": 34,
     "totalTests": 114145,
     "testsPer1M": 16575,
-    "population": 6886736
+    "population": 6886736,
+    "code": "LY"
   },
   {
     "id": 84,
@@ -1593,7 +1656,8 @@
     "deathsPer1M": 17,
     "totalTests": 146218,
     "testsPer1M": 8696,
-    "population": 16814119
+    "population": 16814119,
+    "code": "SN"
   },
   {
     "id": 85,
@@ -1612,7 +1676,8 @@
     "deathsPer1M": 19,
     "totalTests": 401,
     "testsPer1M": 9,
-    "population": 44013654
+    "population": 44013654,
+    "code": "SD"
   },
   {
     "id": 86,
@@ -1631,7 +1696,8 @@
     "deathsPer1M": 16,
     "totalTests": 115570,
     "testsPer1M": 6259,
-    "population": 18465432
+    "population": 18465432,
+    "code": "ZM"
   },
   {
     "id": 87,
@@ -1650,7 +1716,8 @@
     "deathsPer1M": 49,
     "totalTests": 686202,
     "testsPer1M": 126411,
-    "population": 5428362
+    "population": 5428362,
+    "code": "NO"
   },
   {
     "id": 88,
@@ -1669,7 +1736,8 @@
     "deathsPer1M": 26,
     "totalTests": 949367,
     "testsPer1M": 91161,
-    "population": 10414212
+    "population": 10414212,
+    "code": "GR"
   },
   {
     "id": 89,
@@ -1688,7 +1756,8 @@
     "deathsPer1M": 45,
     "totalTests": 168229,
     "testsPer1M": 41023,
-    "population": 4100856
+    "population": 4100856,
+    "code": "HR"
   },
   {
     "id": 90,
@@ -1707,7 +1776,8 @@
     "deathsPer1M": 3,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 89989008
+    "population": 89989008,
+    "code": "CD"
   },
   {
     "id": 91,
@@ -1726,7 +1796,8 @@
     "deathsPer1M": 99,
     "totalTests": 58438,
     "testsPer1M": 20310,
-    "population": 2877257
+    "population": 2877257,
+    "code": "AL"
   },
   {
     "id": 92,
@@ -1745,7 +1816,8 @@
     "deathsPer1M": 4,
     "totalTests": 24530,
     "testsPer1M": 1860,
-    "population": 13189325
+    "population": 13189325,
+    "code": "GN"
   },
   {
     "id": 93,
@@ -1764,7 +1836,8 @@
     "deathsPer1M": 4,
     "totalTests": 1253855,
     "testsPer1M": 38658,
-    "population": 32434697
+    "population": 32434697,
+    "code": "MY"
   },
   {
     "id": 94,
@@ -1783,7 +1856,8 @@
     "deathsPer1M": 197,
     "totalTests": 53174,
     "testsPer1M": 177297,
-    "population": 299915
+    "population": 299915,
+    "code": "GF"
   },
   {
     "id": 95,
@@ -1802,7 +1876,8 @@
     "deathsPer1M": 7,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 9572136
+    "population": 9572136,
+    "code": "TJ"
   },
   {
     "id": 96,
@@ -1821,7 +1896,8 @@
     "deathsPer1M": 24,
     "totalTests": 118395,
     "testsPer1M": 52993,
-    "population": 2234160
+    "population": 2234160,
+    "code": "GA"
   },
   {
     "id": 97,
@@ -1840,7 +1916,8 @@
     "deathsPer1M": 18,
     "totalTests": 23652,
     "testsPer1M": 2070,
-    "population": 11425596
+    "population": 11425596,
+    "code": "HT"
   },
   {
     "id": 98,
@@ -1859,7 +1936,8 @@
     "deathsPer1M": 61,
     "totalTests": 639500,
     "testsPer1M": 115388,
-    "population": 5542190
+    "population": 5542190,
+    "code": "FI"
   },
   {
     "id": 99,
@@ -1878,7 +1956,8 @@
     "deathsPer1M": 52,
     "totalTests": 112927,
     "testsPer1M": 208314,
-    "population": 542099
+    "population": 542099,
+    "code": "MV"
   },
   {
     "id": 100,
@@ -1897,7 +1976,8 @@
     "deathsPer1M": 29,
     "totalTests": 61410,
     "testsPer1M": 24097,
-    "population": 2548412
+    "population": 2548412,
+    "code": "NA"
   },
   {
     "id": 101,
@@ -1916,7 +1996,8 @@
     "deathsPer1M": 34,
     "totalTests": 69937,
     "testsPer1M": 14979,
-    "population": 4669104
+    "population": 4669104,
+    "code": "MR"
   },
   {
     "id": 102,
@@ -1935,7 +2016,8 @@
     "deathsPer1M": 198,
     "totalTests": 641144,
     "testsPer1M": 1021502,
-    "population": 627648
+    "population": 627648,
+    "code": "LU"
   },
   {
     "id": 103,
@@ -1954,7 +2036,8 @@
     "deathsPer1M": 14,
     "totalTests": 150584,
     "testsPer1M": 10107,
-    "population": 14898588
+    "population": 14898588,
+    "code": "ZW"
   },
   {
     "id": 104,
@@ -1973,7 +2056,8 @@
     "deathsPer1M": 64,
     "totalTests": 428150,
     "testsPer1M": 44340,
-    "population": 9656116
+    "population": 9656116,
+    "code": "HU"
   },
   {
     "id": 105,
@@ -1992,7 +2076,8 @@
     "deathsPer1M": 9,
     "totalTests": 45505,
     "testsPer1M": 2369,
-    "population": 19208715
+    "population": 19208715,
+    "code": "MW"
   },
   {
     "id": 106,
@@ -2011,7 +2096,8 @@
     "deathsPer1M": 61,
     "totalTests": 67370,
     "testsPer1M": 68025,
-    "population": 990368
+    "population": 990368,
+    "code": "DJ"
   },
   {
     "id": 107,
@@ -2030,7 +2116,8 @@
     "deathsPer1M": 59,
     "totalTests": 51944,
     "testsPer1M": 36835,
-    "population": 1410166
+    "population": 1410166,
+    "code": "GQ"
   },
   {
     "id": 108,
@@ -2049,7 +2136,8 @@
     "deathsPer1M": 159,
     "totalTests": 48869,
     "testsPer1M": 77807,
-    "population": 628080
+    "population": 628080,
+    "code": "ME"
   },
   {
     "id": 109,
@@ -2068,7 +2156,8 @@
     "deathsPer1M": 12,
     "totalTests": 780415,
     "testsPer1M": 103956,
-    "population": 7507191
+    "population": 7507191,
+    "code": "HK"
   },
   {
     "id": 110,
@@ -2087,26 +2176,8 @@
     "deathsPer1M": 13,
     "totalTests": 31126,
     "testsPer1M": 6426,
-    "population": 4843495
-  },
-  {
-    "id": 111,
-    "country": "Eswatini",
-    "continent": "Africa",
-    "region": "Southern Africa",
-    "totalCases": 4577,
-    "newCases": 16,
-    "totalDeaths": 91,
-    "newDeaths": 6,
-    "totalRecovered": 3529,
-    "newRecovered": 51,
-    "activeCases": 957,
-    "criticalCases": 11,
-    "casesPer1M": 3938,
-    "deathsPer1M": 78,
-    "totalTests": 30007,
-    "testsPer1M": 25820,
-    "population": 1162168
+    "population": 4843495,
+    "code": "CF"
   },
   {
     "id": 112,
@@ -2125,7 +2196,8 @@
     "deathsPer1M": 21,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 6637645
+    "population": 6637645,
+    "code": "NI"
   },
   {
     "id": 113,
@@ -2144,7 +2216,8 @@
     "deathsPer1M": 1,
     "totalTests": 409707,
     "testsPer1M": 31507,
-    "population": 13003544
+    "population": 13003544,
+    "code": "RW"
   },
   {
     "id": 114,
@@ -2163,7 +2236,8 @@
     "deathsPer1M": 121,
     "totalTests": 8616,
     "testsPer1M": 14665,
-    "population": 587512
+    "population": 587512,
+    "code": "SR"
   },
   {
     "id": 115,
@@ -2182,26 +2256,8 @@
     "deathsPer1M": 8,
     "totalTests": 392785,
     "testsPer1M": 34682,
-    "population": 11325428
-  },
-  {
-    "id": 116,
-    "country": "Congo",
-    "continent": "Africa",
-    "region": "Middle Africa",
-    "totalCases": 3979,
-    "newCases": 100,
-    "totalDeaths": 78,
-    "newDeaths": 6,
-    "totalRecovered": 1742,
-    "newRecovered": 10,
-    "activeCases": 2159,
-    "criticalCases": 100,
-    "casesPer1M": 718,
-    "deathsPer1M": 14,
-    "totalTests": 3113,
-    "testsPer1M": 6134,
-    "population": 5539811
+    "population": 11325428,
+    "code": "CU"
   },
   {
     "id": 117,
@@ -2220,7 +2276,8 @@
     "deathsPer1M": 6,
     "totalTests": 334932,
     "testsPer1M": 61342,
-    "population": 5460095
+    "population": 5460095,
+    "code": "SK"
   },
   {
     "id": 118,
@@ -2239,7 +2296,8 @@
     "deathsPer1M": 1,
     "totalTests": 96387,
     "testsPer1M": 3070,
-    "population": 31394007
+    "population": 31394007,
+    "code": "MZ"
   },
   {
     "id": 119,
@@ -2258,7 +2316,8 @@
     "deathsPer1M": 72,
     "totalTests": 76576,
     "testsPer1M": 137481,
-    "population": 556993
+    "population": 556993,
+    "code": "CV"
   },
   {
     "id": 120,
@@ -2277,7 +2336,8 @@
     "deathsPer1M": 7,
     "totalTests": 144042,
     "testsPer1M": 12166,
-    "population": 11839242
+    "population": 11839242,
+    "code": "TN"
   },
   {
     "id": 121,
@@ -2296,7 +2356,8 @@
     "deathsPer1M": 1,
     "totalTests": 749213,
     "testsPer1M": 10729,
-    "population": 69829824
+    "population": 69829824,
+    "code": "TH"
   },
   {
     "id": 122,
@@ -2315,7 +2376,8 @@
     "deathsPer1M": 6,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 15963416
+    "population": 15963416,
+    "code": "SO"
   },
   {
     "id": 123,
@@ -2334,7 +2396,8 @@
     "deathsPer1M": 146,
     "totalTests": 13000,
     "testsPer1M": 47468,
-    "population": 273869
+    "population": 273869,
+    "code": "YT"
   },
   {
     "id": 124,
@@ -2353,7 +2416,8 @@
     "deathsPer1M": 1,
     "totalTests": 226111,
     "testsPer1M": 10552,
-    "population": 21428481
+    "population": 21428481,
+    "code": "LK"
   },
   {
     "id": 125,
@@ -2372,26 +2436,8 @@
     "deathsPer1M": 1,
     "totalTests": 367423,
     "testsPer1M": 7993,
-    "population": 45966999
-  },
-  {
-    "id": 126,
-    "country": "Gambia",
-    "continent": "Africa",
-    "region": "Western Africa",
-    "totalCases": 2963,
-    "newCases": 100,
-    "totalDeaths": 96,
-    "newDeaths": 6,
-    "totalRecovered": 1032,
-    "newRecovered": 10,
-    "activeCases": 1835,
-    "criticalCases": 100,
-    "casesPer1M": 1221,
-    "deathsPer1M": 40,
-    "totalTests": 13354,
-    "testsPer1M": 5501,
-    "population": 2427409
+    "population": 45966999,
+    "code": "UG"
   },
   {
     "id": 127,
@@ -2410,7 +2456,8 @@
     "deathsPer1M": 32,
     "totalTests": 639044,
     "testsPer1M": 235328,
-    "population": 2715546
+    "population": 2715546,
+    "code": "LT"
   },
   {
     "id": 128,
@@ -2429,7 +2476,8 @@
     "deathsPer1M": 64,
     "totalTests": 158824,
     "testsPer1M": 76395,
-    "population": 2078987
+    "population": 2078987,
+    "code": "SI"
   },
   {
     "id": 129,
@@ -2448,7 +2496,8 @@
     "deathsPer1M": 6,
     "totalTests": 38306,
     "testsPer1M": 1883,
-    "population": 20342905
+    "population": 20342905,
+    "code": "ML"
   },
   {
     "id": 130,
@@ -2467,7 +2516,8 @@
     "deathsPer1M": 6,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 17568723
+    "population": 17568723,
+    "code": "SY"
   },
   {
     "id": 131,
@@ -2486,7 +2536,8 @@
     "deathsPer1M": 3,
     "totalTests": 64747,
     "testsPer1M": 1960,
-    "population": 33026462
+    "population": 33026462,
+    "code": "AO"
   },
   {
     "id": 132,
@@ -2505,7 +2556,8 @@
     "deathsPer1M": 4,
     "totalTests": 12044,
     "testsPer1M": 1074,
-    "population": 11215533
+    "population": 11215533,
+    "code": "SS"
   },
   {
     "id": 133,
@@ -2524,7 +2576,8 @@
     "deathsPer1M": 48,
     "totalTests": 148131,
     "testsPer1M": 111655,
-    "population": 1326688
+    "population": 1326688,
+    "code": "EE"
   },
   {
     "id": 134,
@@ -2543,26 +2596,8 @@
     "deathsPer1M": 7,
     "totalTests": 58279,
     "testsPer1M": 19667,
-    "population": 2963359
-  },
-  {
-    "id": 135,
-    "country": "Bahamas",
-    "continent": "Americas",
-    "region": "Caribbean",
-    "totalCases": 2217,
-    "newCases": 50,
-    "totalDeaths": 50,
-    "newDeaths": 6,
-    "totalRecovered": 801,
-    "newRecovered": 19,
-    "activeCases": 1366,
-    "criticalCases": 83,
-    "casesPer1M": 5629,
-    "deathsPer1M": 127,
-    "totalTests": 11165,
-    "testsPer1M": 28347,
-    "population": 393872
+    "population": 2963359,
+    "code": "JM"
   },
   {
     "id": 136,
@@ -2581,7 +2616,8 @@
     "deathsPer1M": 17,
     "totalTests": 1500,
     "testsPer1M": 759,
-    "population": 1975463
+    "population": 1975463,
+    "code": "GW"
   },
   {
     "id": 137,
@@ -2600,7 +2636,8 @@
     "deathsPer1M": 3,
     "totalTests": 118206,
     "testsPer1M": 9710,
-    "population": 12173739
+    "population": 12173739,
+    "code": "BJ"
   },
   {
     "id": 138,
@@ -2619,7 +2656,8 @@
     "deathsPer1M": 29,
     "totalTests": 215302,
     "testsPer1M": 630246,
-    "population": 341616
+    "population": 341616,
+    "code": "IS"
   },
   {
     "id": 139,
@@ -2638,7 +2676,8 @@
     "deathsPer1M": 1,
     "totalTests": 828380,
     "testsPer1M": 81054,
-    "population": 10220051
+    "population": 10220051,
+    "code": "JO"
   },
   {
     "id": 140,
@@ -2657,7 +2696,8 @@
     "deathsPer1M": 9,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 8003270
+    "population": 8003270,
+    "code": "SL"
   },
   {
     "id": 141,
@@ -2676,7 +2716,8 @@
     "deathsPer1M": 94,
     "totalTests": 21266,
     "testsPer1M": 199040,
-    "population": 106843
+    "population": 106843,
+    "code": "AW"
   },
   {
     "id": 142,
@@ -2695,7 +2736,8 @@
     "deathsPer1M": 19,
     "totalTests": 120,
     "testsPer1M": 4,
-    "population": 29931870
+    "population": 29931870,
+    "code": "YE"
   },
   {
     "id": 143,
@@ -2714,7 +2756,8 @@
     "deathsPer1M": 27,
     "totalTests": 190593,
     "testsPer1M": 431457,
-    "population": 441743
+    "population": 441743,
+    "code": "MT"
   },
   {
     "id": 144,
@@ -2733,7 +2776,8 @@
     "deathsPer1M": 16,
     "totalTests": 23651,
     "testsPer1M": 16890,
-    "population": 1400259
+    "population": 1400259,
+    "code": "TT"
   },
   {
     "id": 145,
@@ -2752,7 +2796,8 @@
     "deathsPer1M": 4,
     "totalTests": 758027,
     "testsPer1M": 151542,
-    "population": 5002100
+    "population": 5002100,
+    "code": "NZ"
   },
   {
     "id": 146,
@@ -2771,7 +2816,8 @@
     "deathsPer1M": 3,
     "totalTests": 116728,
     "testsPer1M": 49475,
-    "population": 2359325
+    "population": 2359325,
+    "code": "BW"
   },
   {
     "id": 147,
@@ -2790,7 +2836,8 @@
     "deathsPer1M": 10,
     "totalTests": 35419,
     "testsPer1M": 39513,
-    "population": 896387
+    "population": 896387,
+    "code": "RE"
   },
   {
     "id": 148,
@@ -2809,7 +2856,8 @@
     "deathsPer1M": 13,
     "totalTests": 173187,
     "testsPer1M": 49827,
-    "population": 3475776
+    "population": 3475776,
+    "code": "UY"
   },
   {
     "id": 149,
@@ -2828,7 +2876,8 @@
     "deathsPer1M": 17,
     "totalTests": 286736,
     "testsPer1M": 237200,
-    "population": 1208838
+    "population": 1208838,
+    "code": "CY"
   },
   {
     "id": 150,
@@ -2847,7 +2896,8 @@
     "deathsPer1M": 5,
     "totalTests": 370858,
     "testsPer1M": 92997,
-    "population": 3987847
+    "population": 3987847,
+    "code": "GE"
   },
   {
     "id": 151,
@@ -2866,7 +2916,8 @@
     "deathsPer1M": 3,
     "totalTests": 65180,
     "testsPer1M": 7844,
-    "population": 8309871
+    "population": 8309871,
+    "code": "TG"
   },
   {
     "id": 152,
@@ -2885,7 +2936,8 @@
     "deathsPer1M": 18,
     "totalTests": 251717,
     "testsPer1M": 133713,
-    "population": 1882522
+    "population": 1882522,
+    "code": "LV"
   },
   {
     "id": 153,
@@ -2904,7 +2956,8 @@
     "deathsPer1M": 3,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 20994149
+    "population": 20994149,
+    "code": "BF"
   },
   {
     "id": 154,
@@ -2923,7 +2976,8 @@
     "deathsPer1M": 50,
     "totalTests": 8510,
     "testsPer1M": 10811,
-    "population": 787195
+    "population": 787195,
+    "code": "GY"
   },
   {
     "id": 155,
@@ -2942,7 +2996,8 @@
     "deathsPer1M": 16,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 5076760
+    "population": 5076760,
+    "code": "LR"
   },
   {
     "id": 156,
@@ -2961,7 +3016,8 @@
     "deathsPer1M": 40,
     "totalTests": 30463,
     "testsPer1M": 76132,
-    "population": 400136
+    "population": 400136,
+    "code": "GP"
   },
   {
     "id": 157,
@@ -2980,7 +3036,8 @@
     "deathsPer1M": 3,
     "totalTests": 9052,
     "testsPer1M": 372,
-    "population": 24341651
+    "population": 24341651,
+    "code": "NE"
   },
   {
     "id": 158,
@@ -2999,7 +3056,8 @@
     "deathsPer1M": 686,
     "totalTests": 137457,
     "testsPer1M": 1778550,
-    "population": 77286
+    "population": 77286,
+    "code": "AD"
   },
   {
     "id": 159,
@@ -3018,7 +3076,8 @@
     "deathsPer1M": 14,
     "totalTests": 15632,
     "testsPer1M": 7287,
-    "population": 2145101
+    "population": 2145101,
+    "code": "LS"
   },
   {
     "id": 160,
@@ -3037,7 +3096,8 @@
     "deathsPer1M": 0,
     "totalTests": 1009145,
     "testsPer1M": 10352,
-    "population": 97485232
+    "population": 97485232,
+    "code": "VN"
   },
   {
     "id": 161,
@@ -3056,7 +3116,8 @@
     "deathsPer1M": 5,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 16500291
+    "population": 16500291,
+    "code": "TD"
   },
   {
     "id": 162,
@@ -3075,7 +3136,8 @@
     "deathsPer1M": 33,
     "totalTests": 8143,
     "testsPer1M": 20419,
-    "population": 398805
+    "population": 398805,
+    "code": "BZ"
   },
   {
     "id": 164,
@@ -3094,7 +3156,8 @@
     "deathsPer1M": 0,
     "totalTests": 157843,
     "testsPer1M": 2898,
-    "population": 54471263
+    "population": 54471263,
+    "code": "MM"
   },
   {
     "id": 165,
@@ -3113,7 +3176,8 @@
     "deathsPer1M": 1237,
     "totalTests": 6865,
     "testsPer1M": 202251,
-    "population": 33943
+    "population": 33943,
+    "code": "SM"
   },
   {
     "id": 168,
@@ -3132,7 +3196,8 @@
     "deathsPer1M": 43,
     "totalTests": 12942,
     "testsPer1M": 34492,
-    "population": 375215
+    "population": 375215,
+    "code": "MQ"
   },
   {
     "id": 169,
@@ -3151,7 +3216,8 @@
     "deathsPer1M": 550,
     "totalTests": 14029,
     "testsPer1M": 49893,
-    "population": 281182
+    "population": 281182,
+    "code": "PF"
   },
   {
     "id": 170,
@@ -3170,7 +3236,8 @@
     "deathsPer1M": 0,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 60003066
+    "population": 60003066,
+    "code": "TZ"
   },
   {
     "id": 172,
@@ -3189,7 +3256,8 @@
     "deathsPer1M": 0,
     "totalTests": 87508,
     "testsPer1M": 3673,
-    "population": 23824134
+    "population": 23824134,
+    "code": "TW"
   },
   {
     "id": 173,
@@ -3208,7 +3276,8 @@
     "deathsPer1M": 396,
     "totalTests": 2281,
     "testsPer1M": 53100,
-    "population": 42957
+    "population": 42957,
+    "code": "SX"
   },
   {
     "id": 174,
@@ -3227,7 +3296,8 @@
     "deathsPer1M": 1,
     "totalTests": 15592,
     "testsPer1M": 1737,
-    "population": 8974603
+    "population": 8974603,
+    "code": "PG"
   },
   {
     "id": 175,
@@ -3246,7 +3316,8 @@
     "deathsPer1M": 0,
     "totalTests": 24659,
     "testsPer1M": 2064,
-    "population": 11946511
+    "population": 11946511,
+    "code": "BI"
   },
   {
     "id": 176,
@@ -3265,7 +3336,8 @@
     "deathsPer1M": 8,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 872594
+    "population": 872594,
+    "code": "KM"
   },
   {
     "id": 178,
@@ -3284,7 +3356,8 @@
     "deathsPer1M": 8,
     "totalTests": 227409,
     "testsPer1M": 178763,
-    "population": 1272128
+    "population": 1272128,
+    "code": "MU"
   },
   {
     "id": 179,
@@ -3303,7 +3376,8 @@
     "deathsPer1M": 282,
     "totalTests": 9840,
     "testsPer1M": 115616,
-    "population": 85109
+    "population": 85109,
+    "code": "IM"
   },
   {
     "id": 180,
@@ -3322,7 +3396,8 @@
     "deathsPer1M": 550,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 3554528
+    "population": 3554528,
+    "code": "ER"
   },
   {
     "id": 181,
@@ -3341,7 +3416,8 @@
     "deathsPer1M": 550,
     "totalTests": 54095,
     "testsPer1M": 16457,
-    "population": 3286953
+    "population": 3286953,
+    "code": "MN"
   },
   {
     "id": 182,
@@ -3360,7 +3436,8 @@
     "deathsPer1M": 550,
     "totalTests": 34188,
     "testsPer1M": 1014812,
-    "population": 33689
+    "population": 33689,
+    "code": "GI"
   },
   {
     "id": 183,
@@ -3379,7 +3456,8 @@
     "deathsPer1M": 550,
     "totalTests": 98687,
     "testsPer1M": 5889,
-    "population": 16757184
+    "population": 16757184,
+    "code": "KH"
   },
   {
     "id": 184,
@@ -3398,7 +3476,8 @@
     "deathsPer1M": 550,
     "totalTests": 99204,
     "testsPer1M": 128333,
-    "population": 773023
+    "population": 773023,
+    "code": "BT"
   },
   {
     "id": 185,
@@ -3417,7 +3496,8 @@
     "deathsPer1M": 129,
     "totalTests": 2756,
     "testsPer1M": 71079,
-    "population": 38774
+    "population": 38774,
+    "code": "MF"
   },
   {
     "id": 186,
@@ -3436,7 +3516,8 @@
     "deathsPer1M": 15,
     "totalTests": 35469,
     "testsPer1M": 538633,
-    "population": 65850
+    "population": 65850,
+    "code": "KY"
   },
   {
     "id": 187,
@@ -3455,7 +3536,8 @@
     "deathsPer1M": 24,
     "totalTests": 17180,
     "testsPer1M": 59770,
-    "population": 287435
+    "population": 287435,
+    "code": "BB"
   },
   {
     "id": 188,
@@ -3474,7 +3556,8 @@
     "deathsPer1M": 145,
     "totalTests": 45022,
     "testsPer1M": 723384,
-    "population": 62238
+    "population": 62238,
+    "code": "BM"
   },
   {
     "id": 189,
@@ -3493,7 +3576,8 @@
     "deathsPer1M": 7,
     "totalTests": 51741,
     "testsPer1M": 118082,
-    "population": 438179
+    "population": 438179,
+    "code": "BN"
   },
   {
     "id": 190,
@@ -3512,7 +3596,8 @@
     "deathsPer1M": 25,
     "totalTests": 51953,
     "testsPer1M": 1322329,
-    "population": 39289
+    "population": 39289,
+    "code": "MC"
   },
   {
     "id": 191,
@@ -3531,7 +3616,8 @@
     "deathsPer1M": 550,
     "totalTests": 3113,
     "testsPer1M": 6134,
-    "population": 98450
+    "population": 98450,
+    "code": "SC"
   },
   {
     "id": 192,
@@ -3550,7 +3636,8 @@
     "deathsPer1M": 26,
     "totalTests": 900,
     "testsPer1M": 23593,
-    "population": 38147
+    "population": 38147,
+    "code": "LI"
   },
   {
     "id": 193,
@@ -3569,7 +3656,8 @@
     "deathsPer1M": 31,
     "totalTests": 1900,
     "testsPer1M": 19375,
-    "population": 98065
+    "population": 98065,
+    "code": "AG"
   },
   {
     "id": 194,
@@ -3588,7 +3676,8 @@
     "deathsPer1M": 6,
     "totalTests": 1080,
     "testsPer1M": 6577,
-    "population": 164207
+    "population": 164207,
+    "code": "CW"
   },
   {
     "id": 196,
@@ -3607,7 +3696,8 @@
     "deathsPer1M": 33,
     "totalTests": 2853,
     "testsPer1M": 94267,
-    "population": 30265
+    "population": 30265,
+    "code": "VG"
   },
   {
     "id": 198,
@@ -3626,7 +3716,8 @@
     "deathsPer1M": 2,
     "totalTests": 6693,
     "testsPer1M": 7457,
-    "population": 897538
+    "population": 897538,
+    "code": "FJ"
   },
   {
     "id": 200,
@@ -3645,7 +3736,8 @@
     "deathsPer1M": 550,
     "totalTests": 5542,
     "testsPer1M": 30157,
-    "population": 183769
+    "population": 183769,
+    "code": "LC"
   },
   {
     "id": 201,
@@ -3664,7 +3756,8 @@
     "deathsPer1M": 550,
     "totalTests": 6252,
     "testsPer1M": 55519,
-    "population": 112611
+    "population": 112611,
+    "code": "GD"
   },
   {
     "id": 202,
@@ -3683,7 +3776,8 @@
     "deathsPer1M": 550,
     "totalTests": 12618,
     "testsPer1M": 44126,
-    "population": 285957
+    "population": 285957,
+    "code": "NC"
   },
   {
     "id": 203,
@@ -3702,7 +3796,8 @@
     "deathsPer1M": 550,
     "totalTests": 39063,
     "testsPer1M": 5356,
-    "population": 7292965
+    "population": 7292965,
+    "code": "LA"
   },
   {
     "id": 204,
@@ -3721,7 +3816,8 @@
     "deathsPer1M": 550,
     "totalTests": 2077,
     "testsPer1M": 28841,
-    "population": 72016
+    "population": 72016,
+    "code": "DM"
   },
   {
     "id": 206,
@@ -3740,7 +3836,8 @@
     "deathsPer1M": 550,
     "totalTests": 1564,
     "testsPer1M": 29364,
-    "population": 53262
+    "population": 53262,
+    "code": "KN"
   },
   {
     "id": 208,
@@ -3759,7 +3856,8 @@
     "deathsPer1M": 550,
     "totalTests": 6727,
     "testsPer1M": 118460,
-    "population": 56787
+    "population": 56787,
+    "code": "GL"
   },
   {
     "id": 209,
@@ -3778,7 +3876,8 @@
     "deathsPer1M": 200,
     "totalTests": 328,
     "testsPer1M": 65692,
-    "population": 4993
+    "population": 4993,
+    "code": "MS"
   },
   {
     "id": 210,
@@ -3797,6 +3896,7 @@
     "deathsPer1M": 550,
     "totalTests": 2256,
     "testsPer1M": 645309,
-    "population": 3496
+    "population": 3496,
+    "code": "FK"
   }
 ]

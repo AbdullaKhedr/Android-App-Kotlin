@@ -34,29 +34,4 @@
 
     </item>
 
-    <item
-        android:orderInCategory="100"
-        android:title="@string/language"
-        app:showAsAction="never">
-        <menu>
-            <item
-                android:id="@+id/arabic_lang"
-                android:orderInCategory="200"
-                android:title="@string/arabic"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/english_lang"
-                android:orderInCategory="200"
-                android:title="@string/english"
-                app:showAsAction="never" />
-        </menu>
-
-    </item>
-
-    <item
-        android:id="@+id/app_bar_option_search"
-        android:icon="@drawable/ic_baseline_search_24"
-        android:title="@string/search"
-        app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="ifRoom" />
 </menu>

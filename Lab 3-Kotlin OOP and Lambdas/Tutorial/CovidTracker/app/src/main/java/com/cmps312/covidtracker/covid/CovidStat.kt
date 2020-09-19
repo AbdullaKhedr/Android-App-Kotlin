@@ -20,5 +20,6 @@ data class CovidStat(
     var deathsPer1M: Int?,
     var totalTests: Int?,
     var testsPer1M: Int?,
-    var population: Int?)
+    var population: Int?
+)
 

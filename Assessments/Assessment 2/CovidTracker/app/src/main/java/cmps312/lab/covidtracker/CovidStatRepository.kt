@@ -8,6 +8,7 @@ import java.io.File
 object CovidStatRepository {
 
     var covidStat = arrayListOf<CovidStat>()
+    //var flags = arrayListOf<CountryFlag>()
 
     fun initCovidStat(context: Context) {
         // read from the file as a string
@@ -17,9 +18,17 @@ object CovidStatRepository {
             .use { it.readText() }
         // convert the string into list of objects
         covidStat = Json.decodeFromString(stadiumsJson)
+
+        /*//read flags
+        val flagsData = context.assets
+            .open("flags.json")
+            .bufferedReader()
+            .use { it.readText() }
+        // convert the string into list of objects
+        flags = Json { ignoreUnknownKeys = true }.decodeFromString(flagsData)*/
     }
 
-    // from lab3
+    ///////////////////////////////////////////////////////// functions from lab3 ///////////////////////////////////////////////////////////
     fun totalDeathsInQatar() {
         val totalInQatar = covidStat.find { it.country == "Qatar" }?.totalDeaths
         println("Total COVID-19 deaths in Qatar: $totalInQatar")
