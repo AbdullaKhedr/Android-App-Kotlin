@@ -19,6 +19,11 @@
             android:id="@+id/toolbar"
             layout="@layout/toolbar" />
 
+        <include
+            android:id="@+id/searchbar"
+            layout="@layout/searchbar"/>
+
+        <!--
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,7 +55,7 @@
                 app:srcCompat="@drawable/ic_baseline_cancel_24"
                 tools:ignore="VectorDrawableCompat" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+        -->
 
     </com.google.android.material.appbar.AppBarLayout>
 

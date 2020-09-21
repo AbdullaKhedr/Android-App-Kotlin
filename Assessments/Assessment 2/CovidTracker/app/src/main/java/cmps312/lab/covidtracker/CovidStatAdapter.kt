@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_item_covidstat.view.*
 import java.text.DecimalFormat
@@ -12,7 +14,7 @@ enum class SortBy { COUNTRY, ACTIVE_CASES, POPULATION, TOTAL_DETHS }
 
 // Step 2
 class CovidStatAdapter(var covidStatList: List<CovidStat>, val context: Context) :
-    RecyclerView.Adapter<CovidStatAdapter.CovidStatViewHolder>() {
+    RecyclerView.Adapter<CovidStatAdapter.CovidStatViewHolder>(), Filterable {
 
     var modifiedList = covidStatList
 
@@ -31,19 +33,16 @@ class CovidStatAdapter(var covidStatList: List<CovidStat>, val context: Context)
         notifyDataSetChanged()
     }
 
-    fun filter(searchValue: String) {
+    /*fun filter(searchValue: String) {
         modifiedList = if (searchValue.isEmpty()) {
             covidStatList
         } else {
             covidStatList.filter {
-                it.country.equals(searchValue, true) || it.continent.equals(
-                    searchValue,
-                    true
-                )
+                it.country.equals(searchValue, true)
             }
         }
         notifyDataSetChanged()
-    }
+    }*/
 
     // Step 1: Create the view holder
     inner class CovidStatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -96,6 +95,35 @@ class CovidStatAdapter(var covidStatList: List<CovidStat>, val context: Context)
             ) + " " + suffix[base]
         } else {
             DecimalFormat().format(numValue)
+        }
+    }
+
+    override fun getFilter(): Filter {
+        return countryFilter
+    }
+
+    private val countryFilter: Filter = object : Filter() {
+        lateinit var filteredList: MutableList<CovidStat>
+        override fun performFiltering(constraint: CharSequence): FilterResults {
+            filteredList = ArrayList()
+            filteredList
+            if (constraint.isEmpty()) {
+                filteredList.addAll(covidStatList)
+            } else {
+                val filterPattern = constraint.toString().toLowerCase().trim { it <= ' ' }
+                covidStatList.forEach {
+                    if (it.country?.toLowerCase()?.contains(filterPattern)!!)
+                        filteredList.add(it)
+                }
+            }
+            val results = FilterResults()
+            results.values = filteredList
+            return results
+        }
+
+        override fun publishResults(constraint: CharSequence, results: FilterResults) {
+            modifiedList = filteredList
+            notifyDataSetChanged()
         }
     }
 }

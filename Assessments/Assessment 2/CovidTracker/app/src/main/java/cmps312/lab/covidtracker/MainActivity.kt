@@ -3,15 +3,12 @@ package cmps312.lab.covidtracker
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
+import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.toolbar
-import kotlinx.android.synthetic.main.toolbar.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +18,25 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar as Toolbar)
         initRecyclerView()
 
+
+        val countryAdapter = covidStatsRv.adapter as CovidStatAdapter
+
+        (searchbar as SearchView).setOnQueryTextListener(
+            object : SearchView.OnQueryTextListener {
+                override fun onQueryTextSubmit(query: String): Boolean {
+                    countryAdapter.filter.filter(query)
+                    return false
+                }
+
+                override fun onQueryTextChange(selectedCountry: String): Boolean {
+                    countryAdapter.filter.filter(selectedCountry)
+                    return false
+                }
+            }
+        )
+
         //////////////////////////////////////////////////////////Search handel////////////////////////////////////////////////////
-        val countries = CovidStatRepository.covidStat.map { it.country }
+        /*val countries = CovidStatRepository.covidStat.map { it.country }
         val adapter = ArrayAdapter<String>(
             this,
             android.R.layout.simple_list_item_1, countries
@@ -42,6 +56,8 @@ class MainActivity : AppCompatActivity() {
             val countryAdapter = covidStatsRv.adapter as CovidStatAdapter
             countryAdapter.returnToNormalList()
         }
+
+         */
         //////////////////////////////////////////////////////////Search handel////////////////////////////////////////////////////
     }
 
