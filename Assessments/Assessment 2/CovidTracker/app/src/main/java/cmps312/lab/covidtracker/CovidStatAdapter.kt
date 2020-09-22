@@ -6,23 +6,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
+import android.widget.SearchView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_item_covidstat.view.*
 import java.text.DecimalFormat
 
 enum class SortBy { COUNTRY, ACTIVE_CASES, POPULATION, TOTAL_DETHS }
 
-// Step 2
+// Adapter Step 2
 class CovidStatAdapter(var covidStatList: List<CovidStat>, val context: Context) :
-    RecyclerView.Adapter<CovidStatAdapter.CovidStatViewHolder>(), Filterable {
+    RecyclerView.Adapter<CovidStatAdapter.CovidStatViewHolder>() {
 
-    var modifiedList = covidStatList
+    var modifiedList: List<CovidStat>
 
-    fun returnToNormalList() {
+    init {
         modifiedList = covidStatList
-        notifyDataSetChanged()
     }
 
+    // doing the sort options
     fun sort(sortBy: SortBy) {
         modifiedList = when (sortBy) {
             SortBy.COUNTRY -> modifiedList.sortedBy { it.country }
@@ -33,18 +34,7 @@ class CovidStatAdapter(var covidStatList: List<CovidStat>, val context: Context)
         notifyDataSetChanged()
     }
 
-    /*fun filter(searchValue: String) {
-        modifiedList = if (searchValue.isEmpty()) {
-            covidStatList
-        } else {
-            covidStatList.filter {
-                it.country.equals(searchValue, true)
-            }
-        }
-        notifyDataSetChanged()
-    }*/
-
-    // Step 1: Create the view holder
+    // Adapter Step 1: Create the view holder
     inner class CovidStatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(covidStat: CovidStat) {
             itemView.apply {
@@ -64,19 +54,19 @@ class CovidStatAdapter(var covidStatList: List<CovidStat>, val context: Context)
         }
     }
 
-    // Step 4
+    // Adapter Step 4
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CovidStatViewHolder {
         val itemView =
             LayoutInflater.from(context).inflate(R.layout.list_item_covidstat, parent, false)
         return CovidStatViewHolder(itemView)
     }
 
-    // Step 5
+    // Adapter Step 5
     override fun onBindViewHolder(holder: CovidStatViewHolder, position: Int) {
         holder.bind(modifiedList[position])
     }
 
-    // Step 3
+    // Adapter Step 3
     override fun getItemCount() = modifiedList.size
 
 
@@ -98,32 +88,55 @@ class CovidStatAdapter(var covidStatList: List<CovidStat>, val context: Context)
         }
     }
 
-    override fun getFilter(): Filter {
-        return countryFilter
-    }
-
-    private val countryFilter: Filter = object : Filter() {
+    // Search (filter)
+    fun countryFilter(searchText: String) {
         lateinit var filteredList: MutableList<CovidStat>
-        override fun performFiltering(constraint: CharSequence): FilterResults {
-            filteredList = ArrayList()
-            filteredList
-            if (constraint.isEmpty()) {
-                filteredList.addAll(covidStatList)
-            } else {
-                val filterPattern = constraint.toString().toLowerCase().trim { it <= ' ' }
-                covidStatList.forEach {
-                    if (it.country?.toLowerCase()?.contains(filterPattern)!!)
-                        filteredList.add(it)
-                }
+
+        filteredList = ArrayList()
+        if (searchText.isEmpty()) {
+            filteredList.addAll(covidStatList)
+        } else {
+            val filterPattern = searchText.toLowerCase()
+            covidStatList.forEach {
+                if (it.country?.toLowerCase()?.contains(filterPattern)!!)
+                    filteredList.add(it)
             }
-            val results = FilterResults()
-            results.values = filteredList
-            return results
         }
 
-        override fun publishResults(constraint: CharSequence, results: FilterResults) {
-            modifiedList = filteredList
-            notifyDataSetChanged()
-        }
+        modifiedList = filteredList
+        notifyDataSetChanged()
     }
+
+/*
+
+// this part if you will implement "Filterable" to this class
+
+override fun getFilter(): Filter {
+    return countryFilter
+}
+
+private val countryFilter: Filter = object : Filter() {
+    lateinit var filteredList: MutableList<CovidStat>
+    override fun performFiltering(constraint: CharSequence): FilterResults {
+        filteredList = ArrayList()
+        if (constraint.isEmpty()) {
+            filteredList.addAll(covidStatList)
+        } else {
+            val filterPattern = constraint.toString().toLowerCase().trim { it <= ' ' }
+            covidStatList.forEach {
+                if (it.country?.toLowerCase()?.contains(filterPattern)!!)
+                    filteredList.add(it)
+            }
+        }
+        val results = FilterResults()
+        results.values = filteredList
+        return results
+    }
+
+    override fun publishResults(constraint: CharSequence, results: FilterResults) {
+        modifiedList = filteredList
+        notifyDataSetChanged()
+    }
+}
+*/
 }
