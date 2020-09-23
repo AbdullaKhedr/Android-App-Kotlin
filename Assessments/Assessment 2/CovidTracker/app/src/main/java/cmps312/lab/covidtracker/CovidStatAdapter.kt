@@ -69,7 +69,6 @@ class CovidStatAdapter(var covidStatList: List<CovidStat>, val context: Context)
     // Adapter Step 3
     override fun getItemCount() = modifiedList.size
 
-
     // To display 1000 as 1K
     fun prettyCount(number: String): String? {
         val suffix = charArrayOf(' ', 'k', 'M', 'B', 'T', 'P', 'E')
