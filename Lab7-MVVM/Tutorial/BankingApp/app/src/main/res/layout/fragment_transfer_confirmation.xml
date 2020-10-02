@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<layout>
+    <data>
+        <variable
+            name="newTransfer"
+            type="cmps312.lab.bankingapp.model.Transfer" />
+    </data>
 
     <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -128,6 +134,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textColor="#FFFFFF"
+                android:text="@{newTransfer.fromAccountNo}"
                 android:textSize="18sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -140,6 +147,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
+                android:text="@{newTransfer.beneficiaryAccountNo}"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -151,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
+                android:text="@{String.valueOf(newTransfer.amount)}"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -162,6 +171,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
+                android:text="@{newTransfer.beneficiaryName}"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -216,3 +226,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
+</layout>

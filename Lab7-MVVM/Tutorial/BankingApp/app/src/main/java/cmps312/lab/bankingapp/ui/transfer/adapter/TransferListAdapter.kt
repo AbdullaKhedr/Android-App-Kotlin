@@ -3,11 +3,14 @@ package cmps312.lab.bankingapp.ui.transfer.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 
 import androidx.recyclerview.widget.RecyclerView
 import cmps312.lab.bankingapp.R
+import cmps312.lab.bankingapp.databinding.ListItemTransferBinding
 
 import cmps312.lab.bankingapp.model.Transfer
+import kotlinx.android.synthetic.main.list_item_transfer.view.*
 
 class TransferListAdapter(private val itemSelectedListener: (Transfer) -> Unit) :
     RecyclerView.Adapter<TransferListAdapter.TransferViewHolder>() {
@@ -18,21 +21,23 @@ class TransferListAdapter(private val itemSelectedListener: (Transfer) -> Unit) 
         notifyDataSetChanged()
     }
 
-    inner class TransferViewHolder(private val itemView: View) :
-        RecyclerView.ViewHolder(itemView) {
-
+    inner class TransferViewHolder(private val binding : ListItemTransferBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(transfer: Transfer) {
-          //todo
+            binding.transfer = transfer
+            binding.root.setOnClickListener {
+                itemSelectedListener(transfer)
+            }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransferViewHolder {
 
-        val view =  LayoutInflater.from(parent.context).inflate(
+        val binding : ListItemTransferBinding = DataBindingUtil.inflate(
+            LayoutInflater.from(parent.context),
             R.layout.list_item_transfer, parent, false
         )
-
-        return TransferViewHolder(view)
+        return TransferViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: TransferViewHolder, position: Int) =

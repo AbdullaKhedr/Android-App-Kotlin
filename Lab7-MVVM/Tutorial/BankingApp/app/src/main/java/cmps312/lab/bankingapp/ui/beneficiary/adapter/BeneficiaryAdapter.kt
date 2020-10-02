@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import cmps312.lab.bankingapp.R
 
 import cmps312.lab.bankingapp.model.Beneficiary
+import kotlinx.android.synthetic.main.list_item_beneficiary.view.*
 
 class BeneficiaryAdapter(
     private val itemSelectedListener: (Beneficiary) -> Unit
@@ -22,7 +23,11 @@ class BeneficiaryAdapter(
         RecyclerView.ViewHolder(itemView) {
 
         fun bind(beneficiary: Beneficiary) {
+            itemView.beneficiaryNameTv.text = beneficiary.name
 
+            itemView.setOnClickListener {
+                itemSelectedListener(beneficiary)
+            }
         }
     }
 
