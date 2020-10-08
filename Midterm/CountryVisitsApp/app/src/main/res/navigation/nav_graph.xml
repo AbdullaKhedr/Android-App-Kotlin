@@ -9,7 +9,11 @@
         android:id="@+id/visitsFragment"
         android:name="com.cmps312.countryvisitsapp.ui.VisitsFragment"
         android:label="fragment_visits"
-        tools:layout="@layout/fragment_visits" />
+        tools:layout="@layout/fragment_visits" >
+        <action
+            android:id="@+id/action_visitsFragment_to_addVisitFragment"
+            app:destination="@id/addVisitFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addVisitFragment"
         android:name="com.cmps312.countryvisitsapp.ui.AddVisitFragment"
