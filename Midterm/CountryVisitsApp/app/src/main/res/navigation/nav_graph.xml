@@ -18,5 +18,10 @@
         android:id="@+id/addVisitFragment"
         android:name="com.cmps312.countryvisitsapp.ui.AddVisitFragment"
         android:label="fragment_add_visit"
-        tools:layout="@layout/fragment_add_visit" />
+        tools:layout="@layout/fragment_add_visit" >
+        <action
+            android:id="@+id/action_addVisitFragment_to_visitsFragment"
+            app:destination="@id/visitsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
