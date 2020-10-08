@@ -47,7 +47,6 @@ class VisitedCountryListAdapter(
             parent,
             false
         )
-
         return VisitedCountryViewHolder(binding)
     }
 
@@ -58,22 +57,10 @@ class VisitedCountryListAdapter(
     override fun getItemCount() = visitedCountries.size
 
     fun deleteCountry(viewHolder: RecyclerView.ViewHolder) {
-        // Get the position of the item that was swiped
         val position = viewHolder.adapterPosition
-        val deletedCountry = visitedCountries[position]
-
-        //Remove from filtered list
         visitedCountries.removeAt(position)
 
-        // Inform the RecyclerView adapter that an item has been removed at a specific position.
         notifyItemRemoved(position)
-
-        Snackbar.make(viewHolder.itemView, "${deletedCountry.name} removed", Snackbar.LENGTH_LONG)
-            .setAction("UNDO") {
-                visitedCountries.add(position, deletedCountry)
-                visitedCountries.add(deletedCountry)
-                notifyItemInserted(position)
-            }.show()
     }
 
 }

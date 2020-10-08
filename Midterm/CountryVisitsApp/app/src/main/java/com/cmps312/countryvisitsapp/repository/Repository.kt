@@ -12,11 +12,11 @@ object Repository {
     var countries = mutableListOf<Country>()
 
     fun getVisitedCountries(context: Context): MutableList<VisitedCountry> {
-        val countryString = context.assets
+        val visitedCountryString = context.assets
             .open("visits.json")
             .bufferedReader()
             .use { it.readText() }
-        visitedCountries = Json { ignoreUnknownKeys = true }.decodeFromString(countryString)
+        visitedCountries = Json { ignoreUnknownKeys = true }.decodeFromString(visitedCountryString)
         return visitedCountries
     }
 

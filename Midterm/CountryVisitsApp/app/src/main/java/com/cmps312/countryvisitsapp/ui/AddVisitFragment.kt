@@ -18,7 +18,7 @@ class AddVisitFragment : Fragment(R.layout.fragment_add_visit) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val countriesNames = Repository.countries.map { it.name }
+        val countriesNames: List<String> = Repository.getCountries(requireContext()).map { it.name }
 
         val adapter = ArrayAdapter<String>(
             requireContext(),
