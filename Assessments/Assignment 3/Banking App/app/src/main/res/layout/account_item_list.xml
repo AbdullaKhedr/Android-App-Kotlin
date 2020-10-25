@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardCornerRadius="10dp"
-        app:cardElevation="30dp">
+        app:cardElevation="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -42,7 +42,6 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/deleteBtn"
-                app:layout_constraintStart_toStartOf="@+id/deleteBtn"
                 app:layout_constraintTop_toBottomOf="@+id/deleteBtn"
                 app:srcCompat="@drawable/ic_baseline_edit_24"
                 tools:ignore="VectorDrawableCompat" />
@@ -54,7 +53,8 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:hint="Name"
+                android:text="@{account.name}"
                 app:layout_constraintBottom_toTopOf="@+id/acNumber"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -64,9 +64,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="TextView"
+                android:hint="Account Number"
+                android:text="@{account.accountNo}"
                 app:layout_constraintBottom_toTopOf="@+id/acType"
-                app:layout_constraintEnd_toEndOf="@+id/acName"
                 app:layout_constraintStart_toStartOf="@+id/acName"
                 app:layout_constraintTop_toBottomOf="@+id/acName" />
 
@@ -75,9 +75,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="TextView"
+                android:hint="Account Type"
+                android:text="@{account.acctType}"
                 app:layout_constraintBottom_toTopOf="@+id/acBalance"
-                app:layout_constraintEnd_toEndOf="@+id/acNumber"
                 app:layout_constraintStart_toStartOf="@+id/acNumber"
                 app:layout_constraintTop_toBottomOf="@+id/acNumber" />
 
@@ -88,7 +88,8 @@
                 android:layout_marginEnd="32dp"
                 android:layout_marginRight="32dp"
                 android:layout_marginBottom="16dp"
-                android:text="TextView"
+                android:hint="5000 QR"
+                android:text="@{account.balance+` QR`}"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/editBtn"
