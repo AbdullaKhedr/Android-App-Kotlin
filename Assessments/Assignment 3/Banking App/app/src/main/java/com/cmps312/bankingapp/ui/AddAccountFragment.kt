@@ -1,15 +1,11 @@
 package com.cmps312.bankingapp.ui
 
-import android.content.ContentValues
-import android.content.ContentValues.TAG
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import com.cmps312.bankingapp.R
 import com.cmps312.bankingapp.databinding.FragmentAddAccountBinding
 import com.cmps312.bankingapp.model.Account
