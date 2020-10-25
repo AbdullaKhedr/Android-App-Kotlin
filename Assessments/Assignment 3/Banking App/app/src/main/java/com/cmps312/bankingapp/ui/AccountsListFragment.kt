@@ -1,8 +1,9 @@
 package com.cmps312.bankingapp.ui
 
+import android.content.ContentValues
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -41,7 +42,8 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
     }
 
     private fun editAccountListener(account: Account) {
-        accountViewModel.currentAccount = account
+        accountViewModel.accountToEdit = Account("5")
+        Log.i(ContentValues.TAG, "isEditing: ${accountViewModel.accountToEdit.accountNo != "-1"}")
         findNavController().navigate(R.id.action_accountsListFragment_to_addAccountFragment)
     }
 }

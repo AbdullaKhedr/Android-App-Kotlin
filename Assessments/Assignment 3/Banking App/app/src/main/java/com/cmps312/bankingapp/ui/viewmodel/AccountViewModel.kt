@@ -1,6 +1,5 @@
 package com.cmps312.bankingapp.ui.viewmodel
 
-import android.widget.Toast
 import androidx.lifecycle.*
 import com.cmps312.bankingapp.data.repository.AccountRepository
 import com.cmps312.bankingapp.model.Account
@@ -13,7 +12,7 @@ class AccountViewModel : ViewModel() {
     private val _accounts = liveData {
         emit(AccountRepository.getAccounts())
     } as MutableLiveData
-    var currentAccount: Account? = null
+    var accountToEdit = Account()
 
     val accounts = _accounts as LiveData<List<Account>>
 
@@ -28,18 +27,29 @@ class AccountViewModel : ViewModel() {
         }
     }
 
-    fun addAccount(account: Account) {
+    fun addAccount(newAccount: Account) {
         viewModelScope.launch {
             withContext(Dispatchers.Default) {
-                AccountRepository.addAccount(account)
+                AccountRepository.addAccount(newAccount)
             }
             _accounts.value?.let {
-                _accounts.value = it + account
+                _accounts.value = it + newAccount
             }
         }
     }
 
-    fun updateAccount(account: Account) {
-
+    fun updateAccount(editedAccount: Account) {
+        viewModelScope.launch {
+            withContext(Dispatchers.Default) {
+                AccountRepository.updateAccount(
+                    editedAccount.accountNo,
+                    editedAccount
+                )
+            }
+            _accounts.value?.let {
+                _accounts.value = it - accountToEdit
+                _accounts.value = it + editedAccount
+            }
+        }
     }
 }

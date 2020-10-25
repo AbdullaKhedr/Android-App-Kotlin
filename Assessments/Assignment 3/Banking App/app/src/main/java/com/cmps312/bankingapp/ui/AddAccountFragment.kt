@@ -1,12 +1,15 @@
 package com.cmps312.bankingapp.ui
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.cmps312.bankingapp.R
+import com.cmps312.bankingapp.databinding.FragmentAddAccountBinding
 import com.cmps312.bankingapp.model.Account
 import com.cmps312.bankingapp.ui.viewmodel.AccountViewModel
 import kotlinx.android.synthetic.main.fragment_add_account.*
@@ -17,8 +20,9 @@ class AddAccountFragment : Fragment(R.layout.fragment_add_account) {
         super.onViewCreated(view, savedInstanceState)
 
         if (isEditing()) {
-            textView11.text = "Edit Account"
-            accountViewModel.currentAccount
+            title.text = "Edit Account"
+            //val binding = FragmentAddAccountBinding.bind(view)
+            //binding.account = accountViewModel.accountToEdit
         }
 
         typeSpinner.adapter = ArrayAdapter(
@@ -27,20 +31,24 @@ class AddAccountFragment : Fragment(R.layout.fragment_add_account) {
             resources.getStringArray(R.array.account_type)
         )
 
-        var name = nameEdt.text.toString()
-        var accountNo = numberEdt.text.toString()
-        var accountType = typeSpinner.selectedItem.toString()
-        var balance = 2
-
         doneBtn.setOnClickListener {
-            if (name.isEmpty() || accountNo.isEmpty() || balance < 0) {
+            if (nameEdt.text.isEmpty() || numberEdt.text.isEmpty() || balanceEdt.text.toString()
+                    .toInt() < 0
+            ) {
                 Toast.makeText(context, "Please Fill all the requirements", Toast.LENGTH_SHORT)
                     .show()
             } else {
+
+                val name = nameEdt.text.toString()
+                val accountNo = numberEdt.text.toString()
+                val accountType = typeSpinner.selectedItem.toString()
+                val balance = balanceEdt.text.toString().toInt()
+
                 if (isEditing()) {
                     accountViewModel.updateAccount(Account(accountNo, name, accountType, balance))
+                } else {
+                    accountViewModel.addAccount(Account(accountNo, name, accountType, balance))
                 }
-                accountViewModel.addAccount(Account(accountNo, name, accountType, balance))
                 activity?.onBackPressed()
             }
         }
@@ -50,7 +58,8 @@ class AddAccountFragment : Fragment(R.layout.fragment_add_account) {
         }
     }
 
-    fun isEditing(): Boolean {
-        return (accountViewModel.currentAccount != null)
+    private fun isEditing(): Boolean {
+        Log.i(TAG, "isEditing: ${accountViewModel.accountToEdit.accountNo != "-1"}")
+        return (accountViewModel.accountToEdit.accountNo != "-1")
     }
 }
