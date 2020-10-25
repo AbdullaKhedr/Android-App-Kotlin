@@ -1,26 +1,23 @@
 package com.cmps312.bankingapp.data.api
 
 import com.cmps312.bankingapp.model.Account
-import retrofit2.http.GET
+import retrofit2.http.*
 
 interface AccountService {
 
-    @GET()
+    @GET(".")
     suspend fun getAccounts(): List<Account>
 
-//    @GET("all")
-//    suspend fun getAccount(accountNo: String): Account
-//
-//    @GET("account/{accountNo}")
-//    suspend fun getAccount(@Path("accountNo") accountNo : String) : List<Account>
-//
-//    @POST("accounts")
-//    suspend fun addAccount(@Body account: Account) : Account
-//
-//    @PUT("accounts/{accountNo}")
-//    suspend fun updateAccount(@Path("accountNo") accountNo : String, @Body account: Account) : Account
-//
-//    @DELETE("accounts/{accountNo}")
-//    suspend fun deleteAccount(@Path("accountNo") accountNo: String) : String
+    @GET("{accountNo}")
+    suspend fun getAccount(@Path("accountNo") accountNo: String): Account
+
+    @POST(".")
+    suspend fun addAccount(@Body account: Account): Account
+
+    @PUT("{accountNo}")
+    suspend fun updateAccount(@Path("accountNo") accountNo: String, @Body account: Account): Account
+
+    @DELETE("{accountNo}")
+    suspend fun deleteAccount(@Path("accountNo") accountNo: String): String
 
 }

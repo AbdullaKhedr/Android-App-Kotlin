@@ -48,6 +48,4 @@ class AccountAdapter(
         holder.bind(accounts[position])
 
     override fun getItemCount() = accounts.size
-
-
 }

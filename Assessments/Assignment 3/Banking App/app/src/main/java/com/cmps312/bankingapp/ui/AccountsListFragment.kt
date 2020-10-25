@@ -20,12 +20,9 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
 
         initRecyclerView()
 
-
-
         addFab.setOnClickListener {
             findNavController().navigate(R.id.action_accountsListFragment_to_addAccountFragment)
         }
-
     }
 
     private fun initRecyclerView() {
@@ -34,16 +31,17 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
             adapter = accountAdapter
             layoutManager = LinearLayoutManager(context)
         }
-//        accountViewModel.accounts.observe(viewLifecycleOwner) {
-//            accountAdapter.accounts = it as MutableList
-//        }
+        accountViewModel.accounts.observe(viewLifecycleOwner) {
+            accountAdapter.accounts = it
+        }
     }
 
     private fun deleteAccountListener(account: Account) {
-        //beneficiaryViewModel.deleteBeneficiary(beneficiary)
+        accountViewModel.deleteAccount(account)
     }
 
     private fun editAccountListener(account: Account) {
-        //beneficiaryViewModel.deleteBeneficiary(beneficiary)
+        accountViewModel.currentAccount = account
+        findNavController().navigate(R.id.action_accountsListFragment_to_addAccountFragment)
     }
 }

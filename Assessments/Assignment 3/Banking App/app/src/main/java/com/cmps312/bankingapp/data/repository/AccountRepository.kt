@@ -1,6 +1,7 @@
 package com.cmps312.bankingapp.data.repository
 
 import com.cmps312.bankingapp.data.api.AccountService
+import com.cmps312.bankingapp.model.Account
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
@@ -25,5 +26,10 @@ object AccountRepository {
     }
 
     suspend fun getAccounts() = accountService.getAccounts()
+    suspend fun addAccount(account: Account) = accountService.addAccount(account)
+    suspend fun updateAccount(accountID: String, updatedAcc: Account) =
+        accountService.updateAccount(accountID, updatedAcc)
+
+    suspend fun deleteAccount(accountID: String) = accountService.deleteAccount(accountID)
 
 }
