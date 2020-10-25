@@ -1,10 +1,9 @@
 package com.cmps312.bankingapp.ui
 
-import android.content.ContentValues
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,7 +14,7 @@ import com.cmps312.bankingapp.ui.viewmodel.AccountViewModel
 import kotlinx.android.synthetic.main.fragment_accounts_list.*
 
 class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
-    private val accountViewModel by viewModels<AccountViewModel>()
+    private val accountViewModel: AccountViewModel by activityViewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -42,8 +41,7 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
     }
 
     private fun editAccountListener(account: Account) {
-        accountViewModel.accountToEdit = Account("5")
-        Log.i(ContentValues.TAG, "isEditing: ${accountViewModel.accountToEdit.accountNo != "-1"}")
+        accountViewModel.accountToEdit = account
         findNavController().navigate(R.id.action_accountsListFragment_to_addAccountFragment)
     }
 }

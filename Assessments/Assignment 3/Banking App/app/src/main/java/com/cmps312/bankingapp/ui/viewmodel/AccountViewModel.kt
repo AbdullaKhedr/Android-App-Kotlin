@@ -46,10 +46,11 @@ class AccountViewModel : ViewModel() {
                     editedAccount
                 )
             }
-            _accounts.value?.let {
-                _accounts.value = it - accountToEdit
-                _accounts.value = it + editedAccount
-            }
+            clearToEditAccount()
         }
+    }
+
+    fun clearToEditAccount() {
+        accountToEdit = Account()
     }
 }

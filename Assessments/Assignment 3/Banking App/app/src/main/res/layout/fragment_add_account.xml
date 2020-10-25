@@ -86,7 +86,7 @@
             android:layout_marginTop="24dp"
             android:ems="10"
             android:inputType="number"
-            android:text="@{Integer.valueOf(account.balance)}"
+            android:text="@{Integer.toString(account.balance)}"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/typeSpinner" />
 
@@ -95,7 +95,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-
             app:layout_constraintEnd_toEndOf="@+id/numberEdt"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/numberEdt" />
@@ -133,7 +132,7 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:text="Add Account"
             android:textColor="@color/black"
             android:textSize="24sp"
