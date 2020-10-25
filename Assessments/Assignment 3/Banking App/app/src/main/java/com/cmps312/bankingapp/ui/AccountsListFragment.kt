@@ -21,6 +21,8 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
         initRecyclerView()
 
         addFab.setOnClickListener {
+            // To make sure that is not editing mode
+            accountViewModel.clearToEditAccount()
             findNavController().navigate(R.id.action_accountsListFragment_to_addAccountFragment)
         }
     }

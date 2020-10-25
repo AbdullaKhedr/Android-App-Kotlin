@@ -72,7 +72,6 @@ class AddAccountFragment : Fragment(R.layout.fragment_add_account) {
     }
 
     private fun isEditing(): Boolean {
-        Log.i(ContentValues.TAG, "isEditing: ${accountViewModel.accountToEdit.accountNo != "-1"}")
         return (accountViewModel.accountToEdit.accountNo != "-1")
     }
 }

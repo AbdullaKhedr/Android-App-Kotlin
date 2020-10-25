@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/accountsListFragment"
         android:name="com.cmps312.bankingapp.ui.AccountsListFragment"
-        android:label="fragment_accounts_list"
+        android:label="Accounts List"
         tools:layout="@layout/fragment_accounts_list">
         <action
             android:id="@+id/action_accountsListFragment_to_addAccountFragment"
@@ -17,6 +17,6 @@
     <fragment
         android:id="@+id/addAccountFragment"
         android:name="com.cmps312.bankingapp.ui.AddAccountFragment"
-        android:label="fragment_add_account"
+        android:label="Account Editor"
         tools:layout="@layout/fragment_add_account" />
 </navigation>
