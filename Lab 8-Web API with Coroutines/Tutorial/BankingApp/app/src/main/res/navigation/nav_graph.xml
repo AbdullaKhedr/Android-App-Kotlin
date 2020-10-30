@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/transferListFragment">
+
+    <fragment
+        android:id="@+id/transferListFragment"
+        android:name="cmps312.lab.bankingapp.ui.transfer.TransferListFragment"
+        android:label="Transfers"
+        tools:layout="@layout/fragment_transfer_list">
+        <action
+            android:id="@+id/toTransferDetails"
+            app:destination="@id/transferDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transferDetailsFragment"
+        android:name="cmps312.lab.bankingapp.ui.transfer.TransferDetailsFragment"
+        android:label="Transfer Details"
+        tools:layout="@layout/fragment_transfer_details" />
+    <fragment
+        android:id="@+id/transferFragment"
+        android:name="cmps312.lab.bankingapp.ui.transfer.TransferFragment"
+        android:label="Fund Transfer"
+        tools:layout="@layout/fragment_transfer">
+        <action
+            android:id="@+id/toSelectBeneficiary"
+            app:destination="@id/selectBeneficiaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectBeneficiaryFragment"
+        android:name="cmps312.lab.bankingapp.ui.beneficiary.SelectBeneficiaryFragment"
+        android:label="Select Beneficiary"
+        tools:layout="@layout/fragment_select_beneficiary">
+        <action
+            android:id="@+id/toTransferConfirmation"
+            app:destination="@id/transferConfirmationFragment"
+            app:popUpTo="@id/transferListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/transferConfirmationFragment"
+        android:name="cmps312.lab.bankingapp.ui.transfer.TransferConfirmationFragment"
+        android:label="Transfer Confirmation"
+        tools:layout="@layout/fragment_transfer_confirmation">
+        <action
+            android:id="@+id/toHome"
+            app:destination="@id/transferListFragment"
+            app:popUpTo="@id/transferListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

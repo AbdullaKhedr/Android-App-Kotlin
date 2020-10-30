@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/beneficiaryListFragment">
+
+    <fragment
+        android:id="@+id/beneficiaryListFragment"
+        android:name="cmps312.lab.beneficiaryreivewlab.ui.BeneficiaryListFragment"
+        android:label="Beneficiary List"
+        tools:layout="@layout/fragment_beneficiary_list" >
+        <action
+            android:id="@+id/toBeneficiaryDetailsFragment"
+            app:destination="@id/beneficiaryDetailsFragment" />
+        <action
+            android:id="@+id/toAddBeneficiaryFragment"
+            app:destination="@id/addBeneficiaryFragment" />
+        <action
+            android:id="@+id/toUpdateBeneficiaryFragment"
+            app:destination="@id/updateBeneficiaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBeneficiaryFragment"
+        android:name="cmps312.lab.beneficiaryreivewlab.ui.AddBeneficiaryFragment"
+        android:label="Add Beneficiary"
+        tools:layout="@layout/fragment_add_beneficiary" />
+    <fragment
+        android:id="@+id/updateBeneficiaryFragment"
+        android:name="cmps312.lab.beneficiaryreivewlab.ui.UpdateBeneficiaryFragment"
+        android:label="Update Beneficiary"
+        tools:layout="@layout/fragment_update_beneficiary" />
+    <fragment
+        android:id="@+id/beneficiaryDetailsFragment"
+        android:name="cmps312.lab.beneficiaryreivewlab.ui.BeneficiaryDetailsFragment"
+        android:label="Beneficiary Details"
+        tools:layout="@layout/fragment_beneficiary_details" />
+</navigation>

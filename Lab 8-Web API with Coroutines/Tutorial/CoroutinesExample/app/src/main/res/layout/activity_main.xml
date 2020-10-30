@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="18dp"
+    tools:layout_editor_absoluteY="-123dp">
+
+    <ImageView
+        android:id="@+id/deadImg"
+        android:layout_width="185dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="222dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jumpImg"
+        app:srcCompat="@drawable/dead1" />
+
+    <ImageView
+        android:id="@+id/runImg"
+        android:layout_width="185dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="38dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/jumpImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dead1" />
+
+    <Button
+        android:id="@+id/playDeadBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Play Dead"
+        app:layout_constraintBottom_toBottomOf="@+id/deadImg"
+        app:layout_constraintEnd_toStartOf="@+id/deadImg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/deadImg" />
+
+    <Button
+        android:id="@+id/runBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:text="Run"
+        app:layout_constraintBottom_toBottomOf="@+id/runImg"
+        app:layout_constraintEnd_toStartOf="@+id/runImg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/runImg" />
+
+    <Button
+        android:id="@+id/jumpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:text="Jump"
+        app:layout_constraintBottom_toBottomOf="@+id/jumpImg"
+        app:layout_constraintEnd_toStartOf="@+id/jumpImg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/jumpImg" />
+
+    <ImageView
+        android:id="@+id/jumpImg"
+        android:layout_width="185dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="39dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/deadImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/runImg"
+        app:srcCompat="@drawable/dead1" />
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:text="Start All"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/stopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:text="Stop All"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
