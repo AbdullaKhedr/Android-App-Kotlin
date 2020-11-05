@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "74980972347",
+    "firebase_url": "https://todoapplication-769d8.firebaseio.com",
+    "project_id": "todoapplication-769d8",
+    "storage_bucket": "todoapplication-769d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74980972347:android:12c522fe9de29a4d07891e",
+        "android_client_info": {
+          "package_name": "cmps312.lab.todoapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74980972347-r5kp3r4o3mdofc1vtk9kl06034roetff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAQ4CDcGpkWQ5aebYSfaU0qlUXhum5O8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74980972347-r5kp3r4o3mdofc1vtk9kl06034roetff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
