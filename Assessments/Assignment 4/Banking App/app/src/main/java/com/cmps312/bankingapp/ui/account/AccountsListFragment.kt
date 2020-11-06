@@ -8,7 +8,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cmps312.bankingapp.R
-import com.cmps312.bankingapp.model.Account
+import com.cmps312.bankingapp.entity.Account
 import com.cmps312.bankingapp.ui.account.adapter.AccountAdapter
 import com.cmps312.bankingapp.ui.sharedViewModel.AccountViewModel
 import kotlinx.android.synthetic.main.fragment_accounts_list.*
@@ -32,7 +32,7 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
                 position: Int,
                 id: Long
             ) {
-                accountViewModel.getAccounts(filterSP.selectedItem.toString())
+                accountViewModel.getAccountsByType(filterSP.selectedItem.toString())
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>?) {}

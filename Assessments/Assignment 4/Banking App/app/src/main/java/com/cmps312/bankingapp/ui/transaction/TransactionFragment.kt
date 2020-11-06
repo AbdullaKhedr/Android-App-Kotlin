@@ -8,10 +8,9 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
 import com.cmps312.bankingapp.R
-import com.cmps312.bankingapp.model.Account
-import com.cmps312.bankingapp.model.Transaction
+import com.cmps312.bankingapp.entity.Account
+import com.cmps312.bankingapp.entity.Transaction
 import com.cmps312.bankingapp.ui.sharedViewModel.AccountViewModel
 import kotlinx.android.synthetic.main.fragment_transaction.*
 
@@ -44,7 +43,6 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
 
             override fun onNothingSelected(parentView: AdapterView<*>?) {}
         }
-
 
         val transaction = Transaction()
 

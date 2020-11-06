@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.cmps312.bankingapp.R
 import com.cmps312.bankingapp.databinding.AccountItemListBinding
-import com.cmps312.bankingapp.model.Account
+import com.cmps312.bankingapp.entity.Account
 
 class AccountAdapter(
     val deleteAccountListener: (Account) -> Unit,
