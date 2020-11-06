@@ -25,10 +25,10 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
             findNavController().navigate(R.id.action_accountsListFragment_to_addAccountFragment)
         }
 
-        filterSP.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+        filterSP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parentView: AdapterView<*>?,
-                selectedItemView: View,
+                selectedItemView: View?,
                 position: Int,
                 id: Long
             ) {
@@ -36,7 +36,7 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>?) {}
-        })
+        }
 
     }
 

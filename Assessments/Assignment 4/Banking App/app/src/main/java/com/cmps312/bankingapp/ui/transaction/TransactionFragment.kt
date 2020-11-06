@@ -46,27 +46,32 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
         })
 
 
-        val accountViewModel by activityViewModels<AccountViewModel>()
-
         val transaction = Transaction()
 
         submitBtn.setOnClickListener {
             val amount = amountEdt.text
-            when{
-                amount.isEmpty()-> Toast.makeText(activity, " You should provide a value for the amount to withdraw or deposit", Toast.LENGTH_LONG).show()
-                (amount.toString().toDouble() > accountViewModel.selectedAccountForTransaction.balance )
-                        && transactionTypeSp.selectedItem.equals("Withdraw")-> Toast.makeText(activity, "You do not have enough balance", Toast.LENGTH_LONG).show()
-                else->{
+            when {
+                amount.isEmpty() -> Toast.makeText(
+                    activity,
+                    " You should provide a value for the amount to withdraw or deposit",
+                    Toast.LENGTH_LONG
+                ).show()
+                (amount.toString()
+                    .toDouble() > accountViewModel.selectedAccountForTransaction.balance)
+                        && transactionTypeSp.selectedItem == "Withdraw" -> Toast.makeText(
+                    activity,
+                    "You do not have enough balance",
+                    Toast.LENGTH_LONG
+                ).show()
+                else -> {
                     accountViewModel.addTransaction(transaction)
-                    findNavController().navigate(R.id.accountsListFragment)
+                    activity?.onBackPressed()
                 }
             }
         }
 
-        cancelBtn.setOnClickListener {
-            findNavController().navigateUp()
+        cancel1Btn.setOnClickListener {
+            activity?.onBackPressed()
         }
     }
-
-
 }

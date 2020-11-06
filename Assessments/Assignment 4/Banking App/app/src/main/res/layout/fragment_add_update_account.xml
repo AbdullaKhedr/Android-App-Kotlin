@@ -112,14 +112,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Done"
-            app:layout_constraintBottom_toBottomOf="@+id/cancelBtn"
+            app:layout_constraintBottom_toBottomOf="@+id/cancel1Btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/cancelBtn"
-            app:layout_constraintTop_toTopOf="@+id/cancelBtn" />
+            app:layout_constraintStart_toEndOf="@+id/cancel1Btn"
+            app:layout_constraintTop_toTopOf="@+id/cancel1Btn" />
 
         <Button
-            android:id="@+id/cancelBtn"
+            android:id="@+id/cancel1Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"

@@ -48,8 +48,9 @@ class AddUpdateAccountFragment : Fragment(R.layout.fragment_add_update_account) 
                     .show()
             }
         }
-        cancelBtn.setOnClickListener {
-            activity?.onNavigateUp()
+
+        cancel1Btn.setOnClickListener {
+            activity?.onBackPressed()
         }
     }
 

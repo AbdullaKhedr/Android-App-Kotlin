@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         navController = findNavController(R.id.navHostFragment)
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.accountsListFragment, R.id.transactionFragment))
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.accountsListFragment))
         setupActionBarWithNavController(this, navController, appBarConfiguration)
 
         // Connect the bottomNavBar with the navController to auto-handle OnNavigationItemSelected
