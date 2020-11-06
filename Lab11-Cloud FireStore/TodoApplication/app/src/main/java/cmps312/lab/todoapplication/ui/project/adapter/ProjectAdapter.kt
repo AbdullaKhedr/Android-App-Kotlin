@@ -15,7 +15,6 @@ class ProjectAdapter(val showTodoList: (Project) -> Unit) :
 
     var projects = listOf<Project>()
         set(value) {
-
             for (p: Project in projects)
                 Log.d("TAG Project Id", p.projectId.toString())
             field = value
@@ -26,6 +25,7 @@ class ProjectAdapter(val showTodoList: (Project) -> Unit) :
     inner class ProjectViewHolder(private val binding: ProjectListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(project: Project) {
+            Log.d("TAG Project Id", project.projectId.toString())
             binding.project = project
             binding.root.setOnClickListener { showTodoList(project) }
 

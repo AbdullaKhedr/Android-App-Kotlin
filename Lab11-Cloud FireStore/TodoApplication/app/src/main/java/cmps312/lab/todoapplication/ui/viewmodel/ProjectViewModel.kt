@@ -10,6 +10,7 @@ import cmps312.lab.todoapplication.model.Todo
 import cmps312.lab.todoapplication.repository.TodoListRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
 class ProjectViewModel(application: Application) : AndroidViewModel(application) {
@@ -23,21 +24,23 @@ class ProjectViewModel(application: Application) : AndroidViewModel(application)
     lateinit var selectedTodo: Todo
     var selectedProject: Project? = null
 
-
+    init {
+        registerProjectListener()
+        registerTodoListener()
+    }
 
     fun getTodos(projectId: String) {
         _todos.value = listOf<Todo>() //clear the list
         viewModelScope.launch(Dispatchers.IO) {
             withContext(Dispatchers.Main){
-//                _todos.value =
-//                    cmps312.lab.todoapplication.repository.TodoListRepo.getTodoListByProject(projectId)
+                _todos.value = TodoListRepo.getTodoListByProject(projectId)
             }
         }
     }
 
     fun addTodo(todo: Todo) {
         viewModelScope.launch(Dispatchers.IO) {
-//            TodoListRepo.addTodo(todo).await()
+            TodoListRepo.addTodo(todo).await()
         }
     }
 
@@ -65,6 +68,35 @@ class ProjectViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
+    private fun registerProjectListener(){
+        TodoListRepo.projectsDocumentRef.addSnapshotListener { snapshot, error ->
+           if(error != null) return@addSnapshotListener
+
+            val projects = mutableListOf<Project>()
+            snapshot?.forEach {
+                val project = it.toObject(Project::class.java)
+                project.projectId = it.id
+                projects.add(project)
+            }
+            _projects.value = projects
+        }
+
+    }
+    private fun registerTodoListener(){
+        TodoListRepo.todosDocumentRef.addSnapshotListener { snapshot, error ->
+            if(error != null) return@addSnapshotListener
+
+            val todos = mutableListOf<Todo>()
+            snapshot?.forEach {
+                val todo = it.toObject(Todo::class.java)
+                todo.todoId = it.id
+                if(todo.projectId == selectedProject?.projectId)
+                todos.add(todo)
+            }
+            _todos.value = todos
+        }
+
+    }
 }
 
 
