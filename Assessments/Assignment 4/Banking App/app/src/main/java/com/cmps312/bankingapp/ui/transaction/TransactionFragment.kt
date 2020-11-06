@@ -29,10 +29,10 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
             )
 
         }
-        accountNoSp.setOnItemSelectedListener(object : OnItemSelectedListener {
+        accountNoSp.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(
                 parentView: AdapterView<*>?,
-                selectedItemView: View,
+                selectedItemView: View?,
                 position: Int,
                 id: Long
             ) {
@@ -43,7 +43,7 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>?) {}
-        })
+        }
 
 
         val transaction = Transaction()
