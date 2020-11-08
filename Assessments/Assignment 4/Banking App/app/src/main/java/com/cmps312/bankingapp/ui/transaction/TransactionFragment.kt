@@ -48,34 +48,41 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
 
         submitBtn.setOnClickListener {
             val amount = amountEdt.text
-            when {
-                amount.isEmpty() -> Toast.makeText(
-                    activity,
-                    " You should provide a value for the amount to withdraw or deposit",
-                    Toast.LENGTH_LONG
-                ).show()
-                (amount.toString()
-                    .toDouble() > accountViewModel.selectedAccountForTransaction.balance)
-                        && transactionTypeSp.selectedItem == "Withdraw" -> Toast.makeText(
-                    activity,
-                    "You do not have enough balance",
-                    Toast.LENGTH_LONG
-                ).show()
-                else -> {
-                    if (transactionTypeSp.selectedItem == "Withdraw") {
-                        accountViewModel.selectedAccountForTransaction.balance -= amount.toString().toDouble()
-                        transaction.type = "Withdraw"
-                    } else {
-                        accountViewModel.selectedAccountForTransaction.balance += amount.toString().toDouble()
-                        transaction.type = "Deposit"
+            if (accountViewModel.selectedAccountForTransaction.accountNumber == 0) {
+                Toast.makeText(context, "No Account Provided!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else {
+                when {
+                    amount.isEmpty() -> Toast.makeText(
+                        activity,
+                        " You should provide a value for the amount to withdraw or deposit",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    (amount.toString()
+                        .toDouble() > accountViewModel.selectedAccountForTransaction.balance)
+                            && transactionTypeSp.selectedItem == "Withdraw" -> Toast.makeText(
+                        activity,
+                        "You do not have enough balance",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    else -> {
+                        if (transactionTypeSp.selectedItem == "Withdraw") {
+                            accountViewModel.selectedAccountForTransaction.balance -= amount.toString()
+                                .toDouble()
+                            transaction.type = "Withdraw"
+                        } else {
+                            accountViewModel.selectedAccountForTransaction.balance += amount.toString()
+                                .toDouble()
+                            transaction.type = "Deposit"
+                        }
+                        transaction.amount = amount.toString().toDouble()
+                        transaction.accountNo =
+                            accountViewModel.selectedAccountForTransaction.accountNumber
+                        transaction.id = 0
+                        accountViewModel.addTransaction(transaction)
+                        accountViewModel.updateAccount(accountViewModel.selectedAccountForTransaction)
+                        activity?.onBackPressed()
                     }
-                    transaction.amount = amount.toString().toDouble()
-                    transaction.accountNo = accountViewModel.selectedAccountForTransaction.accountNumber
-                    Toast.makeText(context, transaction.accountNo.toString(), Toast.LENGTH_SHORT).show()
-                    transaction.id = 0
-                    accountViewModel.addTransaction(transaction)
-                    accountViewModel.updateAccount(accountViewModel.selectedAccountForTransaction)
-                    activity?.onBackPressed()
                 }
             }
         }
