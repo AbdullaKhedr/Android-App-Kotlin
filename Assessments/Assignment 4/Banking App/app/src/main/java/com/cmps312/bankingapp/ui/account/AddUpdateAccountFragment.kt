@@ -32,13 +32,15 @@ class AddUpdateAccountFragment : Fragment(R.layout.fragment_add_update_account) 
             if (isValidForm()) {
                 accountViewModel.apply {
                     account.name = nameEdt.text.toString()
-                    account.accountNo = accountNoSp.text.toString()
+                    account.accountNumber = accountNoSp.text.toString().toInt()
                     account.acctType = typeSpinner.selectedItem.toString()
-                    account.balance = balanceEdt.text.toString().toInt()
+                    account.balance = balanceEdt.text.toString().toDouble()
                 }
 
-                if (accountViewModel.isEdit)
-                    accountViewModel.updateAccount()
+                if (accountViewModel.isEdit) {
+                    accountViewModel.updateAccount(accountViewModel.account)
+                    accountViewModel.isEdit = false
+                }
                 else
                     accountViewModel.addAccount()
 
@@ -56,7 +58,7 @@ class AddUpdateAccountFragment : Fragment(R.layout.fragment_add_update_account) 
 
     private fun isValidForm(): Boolean {
         if (nameEdt.text.isEmpty() || accountNoSp.text.isEmpty() || balanceEdt.text.toString()
-                .toInt() < 0
+                .toDouble() < 0
         ) return false
         return true
     }

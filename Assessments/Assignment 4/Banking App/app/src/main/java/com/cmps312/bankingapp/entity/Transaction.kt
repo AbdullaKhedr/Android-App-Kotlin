@@ -9,18 +9,18 @@ import androidx.room.PrimaryKey
     foreignKeys = [
         ForeignKey(
             entity = Account::class,
-            parentColumns = ["id"],
+            parentColumns = ["accountNumber"],
             childColumns = ["accountNo"],
             onDelete = ForeignKey.CASCADE,
             onUpdate = ForeignKey.CASCADE
         )
     ]
 )
-class Transaction(
+data class Transaction(
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
     var type: String = "",
-    var amount: String = "",
+    var amount: Double = 0.0,
     @ColumnInfo(index = true)
-    var accountNo: String = "",
+    var accountNo: Int = 0,
 )

@@ -12,7 +12,7 @@ import kotlinx.coroutines.withContext
 class AccountViewModel(application: Application) : AndroidViewModel(application) {
 
     private val accountRepository by lazy { AccountRepository(application) }
-    var accounts = accountRepository.getAccounts()
+    var accounts = accountRepository.getAllAccounts()
 
     //transaction
     var selectedAccountForTransaction = Account()
@@ -37,7 +37,7 @@ class AccountViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
-    fun updateAccount() {
+    fun updateAccount(account: Account) {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
                 accountRepository.updateAccount(account)
@@ -51,5 +51,12 @@ class AccountViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
-    fun getAccountsByType(type: String) = accountRepository.getAccountsByType(type)
+    fun getAccounts(type: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            accounts = if (type == "All")
+                accountRepository.getAllAccounts()
+            else
+                accountRepository.getAccounts(type)
+        }
+    }
 }

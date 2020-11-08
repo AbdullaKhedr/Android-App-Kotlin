@@ -32,7 +32,7 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
                 position: Int,
                 id: Long
             ) {
-                accountViewModel.getAccountsByType(filterSP.selectedItem.toString())
+                accountViewModel.getAccounts(filterSP.selectedItem.toString())
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>?) {}

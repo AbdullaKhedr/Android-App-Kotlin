@@ -4,14 +4,14 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-class Account(
+data class Account(
     @PrimaryKey(autoGenerate = true)
-    var accountNo: String = "",
+    var accountNumber: Int = 0,
     var name: String = "",
     var acctType: String = "",
-    var balance: Int = 0
+    var balance: Double = 0.0
 ) {
     override fun toString(): String {
-        return accountNo
+        return accountNumber.toString()
     }
 }

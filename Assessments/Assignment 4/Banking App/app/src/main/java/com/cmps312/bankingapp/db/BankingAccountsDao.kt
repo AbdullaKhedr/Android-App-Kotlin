@@ -8,8 +8,11 @@ import com.cmps312.bankingapp.entity.Transaction
 @Dao
 interface BankingAccountsDao {
 
+    @Query("SELECT * FROM Account WHERE acctType =:type")
+    fun getAccounts(type: String): LiveData<List<Account>>
+
     @Query("SELECT * FROM Account")
-    fun getAccounts(): LiveData<List<Account>>
+    fun getAllAccounts(): LiveData<List<Account>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addAccount(account: Account): Long
@@ -19,9 +22,6 @@ interface BankingAccountsDao {
 
     @Update
     suspend fun updateAccount(account: Account)
-
-    @Query("SELECT * FROM Account WHERE acctType =:type")
-    fun getAccountsByType(type: String): LiveData<List<Account>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addTransaction(transaction: Transaction): Long
