@@ -18,7 +18,7 @@ class AccountViewModel(application: Application) : AndroidViewModel(application)
         accountsListener()
     }
 
-    fun accountsListener() {
+    private fun accountsListener() {
         AccountRepository.projectsCollectionRef.addSnapshotListener { snapshot, error ->
             if(error!=null)return@addSnapshotListener
             _accounts.value = snapshot!!.toObjects(Account::class.java)
@@ -51,14 +51,14 @@ class AccountViewModel(application: Application) : AndroidViewModel(application)
     fun updateAccount(account: Account) {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                //AccountRepository.updateAccount(account)
+                AccountRepository.updateAccount(account)
             }
         }
     }
 
     fun addTransaction(transaction: Transaction) {
         viewModelScope.launch(Dispatchers.IO) {
-            //AccountRepository.addTransaction(transaction)
+            AccountRepository.addTransaction(transaction)
         }
     }
 

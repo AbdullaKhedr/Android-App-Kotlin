@@ -48,7 +48,7 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
 
         submitBtn.setOnClickListener {
             val amount = amountEdt.text
-            if (accountViewModel.selectedAccountForTransaction.accountNumber == 0) {
+            if (accountViewModel.selectedAccountForTransaction.accountNumber == "") {
                 Toast.makeText(context, "No Account Provided!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             } else {
@@ -78,7 +78,7 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
                         transaction.amount = amount.toString().toDouble()
                         transaction.accountNo =
                             accountViewModel.selectedAccountForTransaction.accountNumber
-                        transaction.id = 0
+                        transaction.id = ""
                         accountViewModel.addTransaction(transaction)
                         accountViewModel.updateAccount(accountViewModel.selectedAccountForTransaction)
                         activity?.onBackPressed()

@@ -33,7 +33,6 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
                 id: Long
             ) {
                 accountViewModel.getAccounts(filterSP.selectedItem.toString())
-                initRecyclerView()
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>?) {}

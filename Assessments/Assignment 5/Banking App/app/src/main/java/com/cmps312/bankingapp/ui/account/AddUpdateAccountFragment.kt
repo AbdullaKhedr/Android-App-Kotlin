@@ -32,7 +32,7 @@ class AddUpdateAccountFragment : Fragment(R.layout.fragment_add_update_account) 
             if (isValidForm()) {
                 accountViewModel.apply {
                     account.name = nameEdt.text.toString()
-                    account.accountNumber = accountNoSp.text.toString().toInt()
+                    account.accountNumber = accountNoSp.text.toString()
                     account.acctType = typeSpinner.selectedItem.toString()
                     account.balance = balanceEdt.text.toString().toDouble()
                 }

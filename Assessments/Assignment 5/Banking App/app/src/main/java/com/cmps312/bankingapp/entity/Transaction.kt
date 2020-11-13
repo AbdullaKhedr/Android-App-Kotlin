@@ -1,8 +1,11 @@
 package com.cmps312.bankingapp.entity
 
+import com.google.firebase.firestore.DocumentId
+
 data class Transaction(
-    var id: Int = 0,
+    @DocumentId
+    var id: String = "",
     var type: String = "",
     var amount: Double = 0.0,
-    var accountNo: Int = 0,
+    var accountNo: String = "",
 )
