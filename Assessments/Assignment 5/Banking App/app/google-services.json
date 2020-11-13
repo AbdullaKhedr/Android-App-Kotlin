@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "861526272089",
+    "firebase_url": "https://banking-app-afdf1.firebaseio.com",
+    "project_id": "banking-app-afdf1",
+    "storage_bucket": "banking-app-afdf1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861526272089:android:5fe175a1f4524c13102948",
+        "android_client_info": {
+          "package_name": "com.cmps312.bankingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861526272089-88qb9pvr0uua5n6auoevlm2t7f8lpfkm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw3HMiaiJnhz2BY1IysPbApJI9LyCBn6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861526272089-88qb9pvr0uua5n6auoevlm2t7f8lpfkm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
