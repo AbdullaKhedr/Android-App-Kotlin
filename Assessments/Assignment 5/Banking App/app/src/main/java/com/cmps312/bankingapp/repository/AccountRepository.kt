@@ -17,8 +17,9 @@ object AccountRepository {
 
     init {
         // Cashing
-        firebaseDB .firestoreSettings = firestoreSettings { isPersistenceEnabled = true }
+        firebaseDB.firestoreSettings = firestoreSettings { isPersistenceEnabled = true }
     }
+
     suspend fun getAccounts() = projectsCollectionRef.get().await().toObjects(Account::class.java)
     fun addAccount(account: Account) = projectsCollectionRef.add(account).addOnCompleteListener {
         if (it.isSuccessful) {
@@ -28,25 +29,24 @@ object AccountRepository {
         }
     }
 
-    fun deleteAccount(account: Account) =
+    fun deleteAccount(account: Account) {
         projectsCollectionRef.document(account.accountNumber).delete()
+        deleteTransForAcct(account.accountNumber)
+    }
+
+    private fun deleteTransForAcct(acctNo: String) {
+        transactionsCollectionRef.whereEqualTo("accountNo", acctNo).get()
+            .addOnSuccessListener { snapshot ->
+                val batch = firebaseDB.batch()
+                val snapshotList = snapshot.documents
+                snapshotList.forEach { batch.delete(it.reference) }
+                batch.commit().addOnSuccessListener { Log.i(TAG, "deleteTransForAcct: $acctNo") }
+            }
+    }
 
     fun updateAccount(account: Account) =
         projectsCollectionRef.document(account.accountNumber).set(account)
 
     fun addTransaction(transaction: Transaction) = transactionsCollectionRef.add(transaction)
 
-    /*
-
-    fun getAccounts(type: String) = bankingAccountsDao.getAccounts(type)
-    fun getAllAccounts() = bankingAccountsDao.getAllAccounts()
-
-    //    suspend fun addAccount(account: Account) = bankingAccountsDao.addAccount(account)
-    suspend fun updateAccount(account: Account) = bankingAccountsDao.updateAccount(account)
-
-    //    suspend fun deleteAccount(account: Account) = bankingAccountsDao.deleteAccount(account)
-    suspend fun addTransaction(transaction: Transaction) =
-        bankingAccountsDao.addTransaction(transaction)
-
-     */
 }

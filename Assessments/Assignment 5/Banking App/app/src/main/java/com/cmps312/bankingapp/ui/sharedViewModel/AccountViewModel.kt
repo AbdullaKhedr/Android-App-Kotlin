@@ -5,6 +5,7 @@ import androidx.lifecycle.*
 import com.cmps312.bankingapp.repository.AccountRepository
 import com.cmps312.bankingapp.entity.Account
 import com.cmps312.bankingapp.entity.Transaction
+import com.google.firebase.firestore.ListenerRegistration
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -13,46 +14,51 @@ class AccountViewModel(application: Application) : AndroidViewModel(application)
 
     private val _accounts = MutableLiveData<List<Account>>()
     var accounts: LiveData<List<Account>> = _accounts
+    private var accountsUpdateListener: ListenerRegistration? = null
 
-    init {
-        accountsListener()
-    }
-
-    private fun accountsListener() {
-        AccountRepository.projectsCollectionRef.addSnapshotListener { snapshot, error ->
-            if(error!=null)return@addSnapshotListener
-            _accounts.value = snapshot!!.toObjects(Account::class.java)
-        }
-    }
-
-    //transaction
+    // account in a transaction
     var selectedAccountForTransaction = Account()
 
-    //will be used for both edit and update
+    // will be used for both edit and update a user
     var account = Account()
     var isEdit = false
 
-    fun addAccount() {
-        viewModelScope.launch {
-            withContext(Dispatchers.IO) {
-                AccountRepository.addAccount(account)
+    init {
+        registerListeners()
+    }
+
+    fun registerListeners() {
+        accountsListener()
+    }
+
+    fun unRegisterListeners() {
+        accountsUpdateListener?.remove()
+    }
+
+    private fun accountsListener() {
+        accountsUpdateListener?.remove()
+        accountsUpdateListener = AccountRepository.projectsCollectionRef
+            .addSnapshotListener { snapshot, error ->
+                if (error != null) return@addSnapshotListener
+                _accounts.value = snapshot!!.toObjects(Account::class.java)
             }
+    }
+
+    fun addAccount() {
+        viewModelScope.launch(Dispatchers.IO) {
+            AccountRepository.addAccount(account)
         }
     }
 
     fun deleteAccount(account: Account) {
-        viewModelScope.launch {
-            withContext(Dispatchers.IO) {
-                AccountRepository.deleteAccount(account)
-            }
+        viewModelScope.launch(Dispatchers.IO) {
+            AccountRepository.deleteAccount(account)
         }
     }
 
     fun updateAccount(account: Account) {
-        viewModelScope.launch {
-            withContext(Dispatchers.IO) {
-                AccountRepository.updateAccount(account)
-            }
+        viewModelScope.launch(Dispatchers.IO) {
+            AccountRepository.updateAccount(account)
         }
     }
 
@@ -62,12 +68,22 @@ class AccountViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
+    override fun onCleared() {
+        accountsUpdateListener?.remove()
+        super.onCleared()
+    }
+
     fun getAccounts(type: String) {
         viewModelScope.launch(Dispatchers.IO) {
-//            accounts = if (type == "All")
-//                AccountRepository.getAllAccounts()
-//            else
-//                AccountRepository.getAccounts(type)
+            accountsUpdateListener = AccountRepository
+                .projectsCollectionRef
+                .addSnapshotListener { snapshot, error ->
+                    if (error != null) return@addSnapshotListener
+                    _accounts.value = if (type == "All")
+                        snapshot!!.toObjects(Account::class.java)
+                    else
+                        snapshot!!.toObjects(Account::class.java).filter { it.acctType == type }
+                }
         }
     }
 }
