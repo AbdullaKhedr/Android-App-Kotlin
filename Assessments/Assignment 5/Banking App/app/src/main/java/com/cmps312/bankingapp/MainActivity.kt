@@ -22,7 +22,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    private val SIGN_IN_CODE = 300
+    private val SIGN_IN_CODE = 15343
     private val projectViewModel: AccountViewModel by viewModels()
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,10 +76,10 @@ class MainActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK) {
 
             } else {
-//                Toast.makeText(
-//                    this,
-//                    response?.error?.message, Toast.LENGTH_SHORT
-//                ).show()
+                Toast.makeText(
+                    this,
+                    response?.error?.message, Toast.LENGTH_SHORT
+                ).show()
                 showSignIn()
             }
         }
