@@ -50,8 +50,6 @@ class MainActivity : AppCompatActivity() {
     // Handle Navigate Up event (triggered when clicking the arrow button on the Top App Bar
     override fun onSupportNavigateUp() = navController.navigateUp() || super.onSupportNavigateUp()
 
-
-    //todo create the sign in
     private fun showSignIn() {
         //providers for the sign in
 
@@ -93,7 +91,6 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.logoutMI -> {
-                //todo signout the user from the firestore auth
                 Firebase.auth.signOut()
                 projectViewModel.unRegisterListeners()
                 Toast.makeText(this, "Signed out", Toast.LENGTH_SHORT).show()
