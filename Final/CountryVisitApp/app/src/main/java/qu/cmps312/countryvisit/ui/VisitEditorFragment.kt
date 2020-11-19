@@ -57,15 +57,14 @@ class VisitEditorFragment : Fragment(R.layout.fragment_visit_editor) {
         }
 
         saveBtn.setOnClickListener {
-            if (visitsViewModel.isEdit)
+            if (visitsViewModel.isEdit) {
+                val selectedCountry = countrySp.selectedItem as Country
+                visitsViewModel.currentVisit.name = selectedCountry.name
+                visitsViewModel.currentVisit.code = selectedCountry.code
+                visitsViewModel.currentVisit.rating = visitRatingBar.rating
+                visitsViewModel.currentVisit.amount = amountEdt.text.toString().toFloat()
                 visitsViewModel.updateVisit()
-            else {
-                Toast.makeText(
-                    requireContext(),
-                    visitsViewModel.currentVisit.name,
-                    Toast.LENGTH_SHORT
-                ).show()
-
+            } else {
                 val selectedCountry = countrySp.selectedItem as Country
                 val newVisit =
                     Visit(
@@ -77,9 +76,7 @@ class VisitEditorFragment : Fragment(R.layout.fragment_visit_editor) {
                 visitsViewModel.currentVisit = newVisit
                 visitsViewModel.addVisit()
             }
-
             activity?.onBackPressed()
         }
-
     }
 }

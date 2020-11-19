@@ -39,9 +39,6 @@ abstract class VisitsDB : RoomDatabase() {
                     DB_NAME
                 ).build()
             }
-            GlobalScope.launch {
-                initDB(database!!, context)
-            }
             return database as VisitsDB
         }
 
