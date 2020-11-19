@@ -3,6 +3,8 @@ package qu.cmps312.countryvisit.repository
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import qu.cmps312.countryvisit.db.VisitsDB
@@ -25,11 +27,15 @@ class Repository(private val context: Context) {
     }
 
     fun initDB() {
-        VisitsDB.getDatabase(context)
+        GlobalScope.launch {
+            VisitsDB.initDB(visitsDB, context)
+        }
     }
 
     suspend fun getCountries() = countriesDao.getCountries()
-    suspend fun getCountriesByContinent(continentName:String) = countriesDao.getCountriesByContinent(continentName)
+    suspend fun getCountriesByContinent(continentName: String) =
+        countriesDao.getCountriesByContinent(continentName)
+
     fun getContinents() = continentsDao.getContinents()
     fun getVisits() = visitsDao.getVisits()
     suspend fun insertVisit(visit: Visit) = visitsDao.insertVisit(visit)

@@ -1,11 +1,14 @@
 package qu.cmps312.countryvisit.db
 
 import android.content.Context
+import android.widget.Toast
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import qu.cmps312.countryvisit.model.Continent
@@ -42,7 +45,7 @@ abstract class VisitsDB : RoomDatabase() {
             return database as VisitsDB
         }
 
-        private suspend fun initDB(visitsDB: VisitsDB, context: Context) {
+        suspend fun initDB(visitsDB: VisitsDB, context: Context) {
             val continentsDao = visitsDB.getContinentsDao()
             val countriesDao = visitsDB.getCountriesDao()
 
@@ -64,6 +67,15 @@ abstract class VisitsDB : RoomDatabase() {
                     .bufferedReader().use { it.readText() }
                 val countries = json.decodeFromString<List<Country>>(data)
                 countriesDao.insertCountries(countries)
+            } else {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(
+                        context,
+                        "Your DataBase is already initialized",
+                        Toast.LENGTH_SHORT
+                    )
+                        .show()
+                }
             }
         }
     }
