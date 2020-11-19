@@ -1,5 +1,6 @@
 package qu.cmps312.countryvisit.db
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import kotlinx.coroutines.selects.select
 import qu.cmps312.countryvisit.model.Visit
@@ -8,7 +9,7 @@ import qu.cmps312.countryvisit.model.Visit
 interface VisitsDao {
 
     @Query("select * from Visit")
-    suspend fun getVisits(): List<Visit>
+    fun getVisits(): LiveData<List<Visit>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertVisits(visits: List<Visit>): List<Long>

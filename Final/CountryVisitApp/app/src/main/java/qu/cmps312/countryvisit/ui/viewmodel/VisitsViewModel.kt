@@ -21,11 +21,7 @@ class VisitsViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    val visitsList = selectedContinent.switchMap {
-        liveData {
-            emit(repository.getVisits())
-        }
-    }
+    val visitsList = repository.getVisits()
 
     var isEdit = false
     var currentVisit = Visit()
