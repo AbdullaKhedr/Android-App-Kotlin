@@ -41,12 +41,16 @@ class VisitEditorFragment : Fragment(R.layout.fragment_visit_editor) {
             }
         }
 
+        val adapter = ArrayAdapter<Country>(
+            requireContext(),
+            android.R.layout.simple_dropdown_item_1line, mutableListOf()
+        )
+        countrySp.adapter = adapter
+
         visitsViewModel.countriesList.observe(requireActivity()) {
-            val adapter = ArrayAdapter<Country>(
-                requireContext(),
-                android.R.layout.simple_dropdown_item_1line, it
-            )
-            countrySp.adapter = adapter
+            adapter.clear()
+            adapter.addAll(it)
+            adapter.notifyDataSetChanged()
         }
 
         if (visitsViewModel.isEdit) {
