@@ -11,7 +11,7 @@ class VisitsViewModel(application: Application) : AndroidViewModel(application) 
 
     private val repository = Repository(application)
 
-    val continents = repository.getList1()
+    val continents = repository.getContinents()
     var selectedContinent = MutableLiveData<String>()
 
     val countriesList = selectedContinent.switchMap {

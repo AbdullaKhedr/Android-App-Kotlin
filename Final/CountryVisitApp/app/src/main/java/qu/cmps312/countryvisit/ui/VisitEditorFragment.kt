@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import kotlinx.android.synthetic.main.fragment_visit_editor.*
 import qu.cmps312.countryvisit.R
 import qu.cmps312.countryvisit.databinding.FragmentVisitEditorBinding
+import qu.cmps312.countryvisit.model.Continent
 import qu.cmps312.countryvisit.model.Country
 import qu.cmps312.countryvisit.ui.viewmodel.VisitsViewModel
 
@@ -18,7 +19,7 @@ class VisitEditorFragment : Fragment(R.layout.fragment_visit_editor) {
         super.onViewCreated(view, savedInstanceState)
 
         visitsViewModel.continents.observe(requireActivity()) {
-            val adapter = ArrayAdapter<String>(
+            val adapter = ArrayAdapter<Continent>(
                 requireContext(),
                 android.R.layout.simple_dropdown_item_1line, it
             )

@@ -8,11 +8,19 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
+import qu.cmps312.countryvisit.model.Continent
+import qu.cmps312.countryvisit.model.Country
 import qu.cmps312.countryvisit.model.Visit
 
-//@Database(entities = [Visit::class], version = 1, exportSchema = false)
+@Database(
+    entities = [Visit::class, Continent::class, Country::class],
+    version = 1,
+    exportSchema = false
+)
 abstract class VisitsDB : RoomDatabase() {
     abstract fun getVisitsDao(): VisitsDao
+    abstract fun getContinentsDao(): ContinentsDao
+    abstract fun getCountriesDao(): CountriesDao
 
     companion object {
         @Volatile
@@ -35,38 +43,28 @@ abstract class VisitsDB : RoomDatabase() {
         }
 
         private suspend fun initDB(visitsDB: VisitsDB, context: Context) {
-            val visitsDao = visitsDB.getVisitsDao()
-            val visitsCount = visitsDao.getVisitsCount()
+            val continentsDao = visitsDB.getContinentsDao()
+            val countriesDao = visitsDB.getCountriesDao()
 
-            // If visitsCount = 0 then means the DB is empty
-            if (visitsCount == 0) {
+            if (continentsDao.getContinentsCount() == 0 && countriesDao.getCountriesCount() == 0) {
                 val json = Json {
                     ignoreUnknownKeys = true
                     coerceInputValues = true
                 }
                 // Read from json files and write to db
 
-                // 1. Insert Visits
-                var data = context.assets.open("visits.json")
+                // 1. Insert continents
+                var data = context.assets.open("continents.json")
                     .bufferedReader().use { it.readText() }
-                val visits = json.decodeFromString<List<Visit>>(data)
-                val visitsIds = visitsDao.insertVisits(visits)
-                println(">> Debug: visitsIds = visitsDao.insertVisits(visits) $visitsIds")
+                val continents = json.decodeFromString<List<Continent>>(data)
+                continentsDao.insertContinents(continents)
 
-//                // 2. Insert ratings
-//                data = context.assets.open("ratings.json")
-//                    .bufferedReader().use { it.readText() }
-//                var ratings = json.decodeFromString<List<Rating>>(data)
-//                println(">> Debug: initDB ratings $ratings")
-//                ratings = ratings.map {
-//                    // Lookup the category id
-//                    val category = packageDao.getLearningPackage(it.packageId!!)
-//                    Rating()
-//                }
-//              val productIds = packageDao.insertProducts(products)
-//              println(">> Debug: productIds = productDao.insertProducts(products) $productIds")
+                // 2. Insert countries
+                data = context.assets.open("countries.json")
+                    .bufferedReader().use { it.readText() }
+                val countries = json.decodeFromString<List<Country>>(data)
+                countriesDao.insertCountries(countries)
             }
         }
     }
-
 }

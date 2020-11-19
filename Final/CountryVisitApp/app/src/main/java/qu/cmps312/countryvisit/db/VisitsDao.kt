@@ -1,10 +1,14 @@
 package qu.cmps312.countryvisit.db
 
 import androidx.room.*
+import kotlinx.coroutines.selects.select
 import qu.cmps312.countryvisit.model.Visit
 
 @Dao
 interface VisitsDao {
+
+    @Query("select * from Visit")
+    suspend fun getVisits(): List<Visit>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertVisits(visits: List<Visit>): List<Long>
@@ -12,13 +16,13 @@ interface VisitsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertVisit(visit: Visit): Long
 
-    //@Query("select count(*) from Visit")
+    @Query("select count(*) from Visit")
     suspend fun getVisitsCount(): Int
 
     @Delete
-    suspend fun deleteVisit(visit: Visit): Long
+    suspend fun deleteVisit(visit: Visit): Int
 
     @Update
-    suspend fun updateVisit(visit: Visit): Long
+    suspend fun updateVisit(visit: Visit): Int
 
 }

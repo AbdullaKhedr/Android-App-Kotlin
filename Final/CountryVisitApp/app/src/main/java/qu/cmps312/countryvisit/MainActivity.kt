@@ -7,10 +7,12 @@ import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import qu.cmps312.countryvisit.repository.Repository
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
+    //private val repository = Repository()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,16 +22,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Handle Navigate Up event (triggered when clicking the arrow button on the Top App Bar
-    override fun onSupportNavigateUp() =  navController.navigateUp() || super.onSupportNavigateUp()
+    override fun onSupportNavigateUp() = navController.navigateUp() || super.onSupportNavigateUp()
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
+    // ToDo: Implement init database to fill country and continent tables from json files if the tables are empty
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.mi_init_db -> {
+                //repository.initDB()
             }
         }
         return super.onOptionsItemSelected(item)

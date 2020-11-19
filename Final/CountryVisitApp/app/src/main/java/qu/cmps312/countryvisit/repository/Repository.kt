@@ -11,39 +11,29 @@ import qu.cmps312.countryvisit.model.Visit
 
 class Repository(private val context: Context) {
 
-    // dummy getContinents() instead
-    fun getList1(): LiveData<List<String>> {
-        return liveData<List<String>> { emit(listOf<String>("A", "B", "C")) }
-    }
-
     private val visitsDB by lazy {
         VisitsDB.getDatabase(context)
     }
-
     private val visitsDao by lazy {
         visitsDB.getVisitsDao()
     }
-
-    private fun getJsonAsStringData(fileName: String): String {
-        return context.assets
-            .open(fileName)
-            .bufferedReader()
-            .use { it.readText() }
+    private val continentsDao by lazy {
+        visitsDB.getContinentsDao()
+    }
+    private val countriesDao by lazy {
+        visitsDB.getCountriesDao()
     }
 
-    fun getContinents(): List<String> {
-        val continentsString = getJsonAsStringData("continents.json")
-        return Json { ignoreUnknownKeys = true }.decodeFromString(continentsString)
+    fun initDB() {
+        VisitsDB.getDatabase(context)
     }
 
-    fun getCountries(): List<Country> {
-        val countriesString = getJsonAsStringData("countries.json")
-        return Json { ignoreUnknownKeys = true }.decodeFromString(countriesString)
-    }
+    suspend fun getCountries() = countriesDao.getCountries()
+    fun getContinents() = continentsDao.getContinents()
+    suspend fun getVisits() = visitsDao.getVisits()
+    suspend fun insertVisit(visit: Visit) = visitsDao.insertVisit(visit)
+    suspend fun deleteVisit(visit: Visit) = visitsDao.deleteVisit(visit)
+    suspend fun updateVisit(visit: Visit) = visitsDao.updateVisit(visit)
 
-    fun getVisits(): List<Visit> {
-        val visitsString = getJsonAsStringData("visits.json")
-        return Json { ignoreUnknownKeys = true }.decodeFromString(visitsString)
-    }
 
 }
