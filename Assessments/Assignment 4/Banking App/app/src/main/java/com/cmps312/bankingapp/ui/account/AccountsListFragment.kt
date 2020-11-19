@@ -3,6 +3,7 @@ package com.cmps312.bankingapp.ui.account
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -24,6 +25,14 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
             accountViewModel.isEdit = false
             findNavController().navigate(R.id.action_accountsListFragment_to_addAccountFragment)
         }
+        accountViewModel.types.observe(requireActivity()){
+            val adapter = ArrayAdapter<String>(
+                requireContext(),
+                R.layout.spinner_text, it
+            )
+            filterSP.adapter = adapter
+        }
+
 
         filterSP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -32,8 +41,8 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
                 position: Int,
                 id: Long
             ) {
-                accountViewModel.getAccounts(filterSP.selectedItem.toString())
-                initRecyclerView()
+                accountViewModel.selectedType.value = filterSP.selectedItem.toString()
+                //initRecyclerView()
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>?) {}
@@ -47,8 +56,8 @@ class AccountsListFragment : Fragment(R.layout.fragment_accounts_list) {
             adapter = accountAdapter
             layoutManager = LinearLayoutManager(context)
         }
-        accountViewModel.accounts.observe(viewLifecycleOwner) {
-            accountAdapter.accounts = it
+        accountViewModel.accounts.observe(requireActivity()) {
+            accountAdapter.accounts = it // error 1  as List<Account>
         }
     }
 

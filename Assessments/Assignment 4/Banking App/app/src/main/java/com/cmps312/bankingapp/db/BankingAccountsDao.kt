@@ -9,10 +9,10 @@ import com.cmps312.bankingapp.entity.Transaction
 interface BankingAccountsDao {
 
     @Query("SELECT * FROM Account WHERE acctType =:type")
-    fun getAccounts(type: String): LiveData<List<Account>>
+    suspend fun getAccounts(type: String): List<Account>
 
     @Query("SELECT * FROM Account")
-    fun getAllAccounts(): LiveData<List<Account>>
+    suspend fun getAllAccounts(): List<Account>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addAccount(account: Account): Long

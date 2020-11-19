@@ -12,7 +12,18 @@ import kotlinx.coroutines.withContext
 class AccountViewModel(application: Application) : AndroidViewModel(application) {
 
     private val accountRepository by lazy { AccountRepository(application) }
-    var accounts = accountRepository.getAllAccounts()
+    val types = liveData<List<String>> { emit(listOf<String>("All", "Saving", "Current")) }
+    var selectedType = MutableLiveData<String>()
+    var accounts = selectedType.switchMap { type ->
+        liveData {
+            emit(
+                if (type == "All")
+                    accountRepository.getAllAccounts()
+                else
+                    accountRepository.getAccounts(type)
+            )
+        }
+    }
 
     //transaction
     var selectedAccountForTransaction = Account()
@@ -51,12 +62,4 @@ class AccountViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
-    fun getAccounts(type: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            accounts = if (type == "All")
-                accountRepository.getAllAccounts()
-            else
-                accountRepository.getAccounts(type)
-        }
-    }
 }

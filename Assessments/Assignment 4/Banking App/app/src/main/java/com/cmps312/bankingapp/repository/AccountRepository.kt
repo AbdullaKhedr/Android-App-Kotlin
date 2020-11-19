@@ -12,8 +12,8 @@ class AccountRepository(private val context: Context) {
         BankingAccountsDatabase.getDatabase(context).bankingAccountsDao()
     }
 
-    fun getAccounts(type: String) = bankingAccountsDao.getAccounts(type)
-    fun getAllAccounts() = bankingAccountsDao.getAllAccounts()
+    suspend fun getAccounts(type: String) = bankingAccountsDao.getAccounts(type)
+    suspend fun getAllAccounts() = bankingAccountsDao.getAllAccounts()
     suspend fun addAccount(account: Account) = bankingAccountsDao.addAccount(account)
     suspend fun updateAccount(account: Account) = bankingAccountsDao.updateAccount(account)
     suspend fun deleteAccount(account: Account) = bankingAccountsDao.deleteAccount(account)

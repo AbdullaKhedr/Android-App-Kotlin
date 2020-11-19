@@ -24,7 +24,7 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
             accountNoSp.adapter = ArrayAdapter<Account>(
                 view.context,
                 android.R.layout.simple_dropdown_item_1line,
-                it
+                it  // error 2 as List<Account>
             )
 
         }
@@ -35,10 +35,10 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
                 position: Int,
                 id: Long
             ) {
-                accountViewModel.selectedAccountForTransaction =
-                    accountViewModel.accounts.value?.get(position)!!
+                accountViewModel.selectedAccountForTransaction = accountNoSp.selectedItem as Account
                 nameTv.text = accountViewModel.selectedAccountForTransaction.name
                 balanceTv.text = accountViewModel.selectedAccountForTransaction.balance.toString()
+
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>?) {}
