@@ -42,5 +42,4 @@ class Repository(private val context: Context) {
     suspend fun deleteVisit(visit: Visit) = visitsDao.deleteVisit(visit)
     suspend fun updateVisit(visit: Visit) = visitsDao.updateVisit(visit)
 
-
 }

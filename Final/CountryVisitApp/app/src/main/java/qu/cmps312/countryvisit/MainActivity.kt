@@ -12,7 +12,7 @@ import qu.cmps312.countryvisit.repository.Repository
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
-    //private val repository = Repository()
+    private val repository = Repository(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.mi_init_db -> {
-                //repository.initDB()
+                repository.initDB()
             }
         }
         return super.onOptionsItemSelected(item)
