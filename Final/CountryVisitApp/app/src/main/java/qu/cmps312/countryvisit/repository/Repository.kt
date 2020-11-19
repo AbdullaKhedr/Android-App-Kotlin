@@ -29,6 +29,7 @@ class Repository(private val context: Context) {
     }
 
     suspend fun getCountries() = countriesDao.getCountries()
+    suspend fun getCountriesByContinent(continentName:String) = countriesDao.getCountriesByContinent(continentName)
     fun getContinents() = continentsDao.getContinents()
     suspend fun getVisits() = visitsDao.getVisits()
     suspend fun insertVisit(visit: Visit) = visitsDao.insertVisit(visit)

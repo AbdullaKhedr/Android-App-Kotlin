@@ -34,7 +34,7 @@ class VisitEditorFragment : Fragment(R.layout.fragment_visit_editor) {
                 position: Int,
                 id: Long
             ) {
-                val selectedContinent = continentSp.selectedItem as String
+                val selectedContinent = continentSp.selectedItem as Continent
                 visitsViewModel.selectedContinent.value = selectedContinent
             }
         }

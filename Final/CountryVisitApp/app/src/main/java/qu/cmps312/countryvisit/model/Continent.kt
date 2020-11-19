@@ -8,8 +8,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 @Entity
 data class Continent(
-    @PrimaryKey(autoGenerate = true)
-    var id: Int,
+    @PrimaryKey
     var name: String
 ) {
     override fun toString(): String {
