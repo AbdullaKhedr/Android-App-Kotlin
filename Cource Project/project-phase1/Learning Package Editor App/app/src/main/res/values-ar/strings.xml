@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">محرر حقيبة التعلم</string>
+    <string-array name="package_level">
+        <item>سهلة</item>
+        <item>متوسطة</item>
+        <item>صعبة</item>
+    </string-array>
+    <string-array name="package_language">
+        <item>الانجليزية</item>
+        <item>العربية</item>
+    </string-array>
+    <string name="welcome">مرحبا</string>
+    <string name="nice_to_see_you_again">أهلا بك مرة أخرى</string>
+    <string name="start">ابدأ</string>
+    <string name="login">دخول</string>
+    <string name="email_address">الإيميل</string>
+    <string name="password">كلمة المرور</string>
+    <string name="forget_pss">نسيت كلمة المرور</string>
+    <string name="remember_me">تذكرني</string>
+    <string name="you_are_not_a_member">لست عضو؟</string>
+    <string name="register">تسجيل</string>
+    <string name="Close">أغلق</string>
+    <string name="Open">افتح</string>
+    <string name="verification_code">رمز التحقق</string>
+    <string name="verify_code">تحقق</string>
+    <string name="app_information">معلومات التطبيق</string>
+    <string name="reset_password">إستعادة كلمة المرور</string>
+    <string name="first_name">الاسم الأول</string>
+    <string name="last_name">الاسم الأخير</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="re_enter_password">أعد إدخال كلمة المرور</string>
+    <string name="sign_up">تسجيل</string>
+    <string name="already_have_an_account">هل تملك حسابا؟</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="settings">الإعدادات</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="info">معلموات</string>
+    <string name="search">بحث</string>
+    <string name="rate_us">قيمنا</string>
+    <string name="send_email">إرسال رسالة</string>
+    <string name="select_media_img">صورة</string>
+    <string name="pkgTitle">العنوان</string>
+    <string name="pkgDescription">الوصف</string>
+    <string name="pkgCategory">القسم</string>
+    <string name="pkgWords">الكلمات</string>
+    <string name="pkgDefinitions">التعاريف</string>
+    <string name="pkgSentences">الجمل</string>
+    <string name="pkgMultiMedia">الوسائط المتعددة</string>
+    <string name="_0_definitions">0 تعاريف</string>
+    <string name="_0_sentences">0 جمل</string>
+    <string name="word">كلمة</string>
+    <string name="_image">صورة</string>
+    <string name="definition">تعريف</string>
+    <string name="sentence">جملة</string>
+    <string name="sentences">جمل</string>
+    <string name="cancel">إلغاء</string>
+    <string name="submit">إرسال</string>
+    <string name="new_word">كلمة جديدة</string>
+    <string name="new_learning_package">حقيبة تعليمية جديدة</string>
+    <string name="next">التالي</string>
+    <string name="language">اللغة</string>
+    <string name="level">المستوى</string>
+    <string name="edit_learning_package">تعديل الحقيبة التعليمية</string>
+    <string name="pkgWordsList">كلمات الحقيبة: %s</string>
+    <string name="select_media_video">فيديو</string>
+    <string name="select_media_link">رابط</string>
+    <string name="edit_pkg">تعديل</string>
+    <string name="delete_pkg">حذف</string>
+    <string name="package_words_list">قائمة الكلمات للحقيبة</string>
+    <string name="submit_learning_package">إنشاء حقيبة تعليمية</string>
+</resources>

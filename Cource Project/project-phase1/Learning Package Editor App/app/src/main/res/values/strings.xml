@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Learning Package Editor App</string>
+    <string-array name="package_level">
+        <item>Easy</item>
+        <item>Average</item>
+        <item>Difficult</item>
+    </string-array>
+    <string-array name="package_language">
+        <item>English</item>
+        <item>Arabic</item>
+    </string-array>
+    <string name="welcome">Welcome</string>
+    <string name="nice_to_see_you_again">Nice to see you again!</string>
+    <string name="start">Start</string>
+    <string name="login">Login</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forget_pss">Forgot Password?</string>
+    <string name="remember_me">Remember me</string>
+    <string name="you_are_not_a_member">You are not a member?</string>
+    <string name="register">Register</string>
+    <string name="Close">close</string>
+    <string name="Open">open</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="verify_code">Verify</string>
+    <string name="app_information">App Information</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="info">Info</string>
+    <string name="search">Search</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="example_email_com" translatable="false">example@email.com</string>
+    <string name="pass_hint" translatable="false">•••••••••</string>
+    <string name="send_email">Send Email</string>
+    <string name="pkgTitle">Title</string>
+    <string name="pkgDescription">Description</string>
+    <string name="pkgCategory">Category</string>
+    <string name="pkgWords">Words</string>
+    <string name="pkgDefinitions">Definitions</string>
+    <string name="pkgSentences">Sentences</string>
+    <string name="pkgMultiMedia">Multi-Media</string>
+    <string name="_0_definitions">0 Definitions</string>
+    <string name="_0_sentences">0 Sentences</string>
+    <string name="word">Word</string>
+    <string name="_image">image</string>
+    <string name="definition">Definition</string>
+    <string name="sentence">Sentence</string>
+    <string name="sentences">Sentences</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="new_word">New Word</string>
+    <string name="new_learning_package">New Learning Package</string>
+    <string name="next">Next</string>
+    <string name="language">Language</string>
+    <string name="level">Level</string>
+    <string name="edit_learning_package">Edit Learning Package</string>
+    <string name="edit_pkg">Edit</string>
+    <string name="delete_pkg">Delete</string>
+    <string name="select_media_img">Image</string>
+    <string name="pkgWordsList">%s words list</string>
+    <string name="select_media_video">Video</string>
+    <string name="select_media_link">Web Link</string>
+    <string name="package_words_list">Package Words List</string>
+    <string name="submit_learning_package">Submit Learning Package</string>
+</resources>

@@ -1,0 +1,95 @@
+[
+  {
+    "packageID": "1",
+    "authorName": "Abdulla Khedr",
+    "authorUserId": "111",
+    "category": "Travel",
+    "description": "Important words to know in travelling",
+    "media": "",
+    "mediaType": "NONE",
+    "keyWords": [
+      "Airport",
+      "Ticket"
+    ],
+    "language": "English",
+    "lastUpdateDate": "18/10/2020",
+    "level": "Difficult",
+    "title": "Travelling Learning Package",
+    "version": "1",
+    "words": [
+      {
+        "text": "Word 1",
+        "definitions": [{"text": "def1"}, {"text": "def2"}, {"text": "def3"}],
+        "sentences": [{"text": "This is a long sentence, right?"}, {"text": "Well, not that long!"}, {"text": "Really?!"}, {"text": "Nah"}, {"text": "Should I keep going with this? I mean who is gonna read this?!"}, {"text": "I want to though..."}, {"text": "Okay. So did you know the smallest bone in your body is in your ears."}]
+      },
+      {
+        "text": "Word 2",
+        "definitions": [],
+        "sentences": []
+      },
+      {
+        "text": "Word 3",
+        "definitions": [],
+        "sentences": []
+      }
+    ],
+    "ratings": null
+  },
+  {
+    "packageID": "2",
+    "authorName": "Mohamed Abushahla",
+    "authorUserId": "222",
+    "category": "Education",
+    "description": "Important words to know in education",
+    "media": "",
+    "mediaType": "NONE",
+    "keyWords": [
+      "Class",
+      "Subject"
+    ],
+    "language": "English",
+    "lastUpdateDate": "15/10/2020",
+    "level": "Average",
+    "title": "Education Learning Package",
+    "version": "1",
+    "words": [
+      {
+        "text": "Word 1",
+        "definitions": [],
+        "sentences": []
+      },
+      {
+        "text": "Word 2",
+        "definitions": [],
+        "sentences": []
+      }
+    ],
+    "ratings": null
+  },
+  {
+    "packageID": "3",
+    "authorName": "Hasan Alsamra",
+    "authorUserId": "333",
+    "category": "Sport",
+    "description": "Important words to know in sports",
+    "media": "",
+    "mediaType": "NONE",
+    "keyWords": [
+      "Player",
+      "Stadium"
+    ],
+    "language": "Arabic",
+    "lastUpdateDate": "13/10/2020",
+    "level": "Easy",
+    "title": "Sports Learning Package",
+    "version": "1",
+    "words": [
+      {
+        "text": "Word 1",
+        "definitions": [],
+        "sentences": []
+      }
+    ],
+    "ratings": null
+  }
+]

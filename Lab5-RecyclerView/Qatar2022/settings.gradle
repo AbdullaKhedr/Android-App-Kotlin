@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "Qatar 2022"

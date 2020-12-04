@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "897366708167",
+    "firebase_url": "https://cmps312-phase2-lingosnacks-t4.firebaseio.com",
+    "project_id": "cmps312-phase2-lingosnacks-t4",
+    "storage_bucket": "cmps312-phase2-lingosnacks-t4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897366708167:android:1c2b01196ece77123d93e2",
+        "android_client_info": {
+          "package_name": "qu.cmps312.lingosnacks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897366708167-u5jl978ih97trasep39e56dqja6g4eif.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLeo7Y3kp70mDM6zL-wPvE-01yd1yLFEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897366708167-u5jl978ih97trasep39e56dqja6g4eif.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

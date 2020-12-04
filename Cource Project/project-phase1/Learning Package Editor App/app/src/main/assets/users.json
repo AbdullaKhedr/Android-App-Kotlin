@@ -1,0 +1,29 @@
+[
+  {
+    "id": "111",
+    "firstName": "Abdulla",
+    "lastName": "Khedr",
+    "email": "abdulla@gmail.com",
+    "phoneNumber": "12345678",
+    "password": "12345678",
+    "role": "Teacher"
+  },
+  {
+    "id": "222",
+    "firstName": "Mohamed",
+    "lastName": "Abushala",
+    "email": "Mohamed@gmail.com",
+    "phoneNumber": "12345678",
+    "password": "12345678",
+    "role": "Teacher"
+  },
+  {
+    "id": "333",
+    "firstName": "Hasan",
+    "lastName": "Alsamra",
+    "email": "hasam@gmail.com",
+    "phoneNumber": "12345678",
+    "password": "12345678",
+    "role": "Teacher"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "992468183574",
+    "firebase_url": "https://learning-package-editor-app.firebaseio.com",
+    "project_id": "learning-package-editor-app",
+    "storage_bucket": "learning-package-editor-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992468183574:android:8c48a2adf588a6b743a337",
+        "android_client_info": {
+          "package_name": "com.cmps312.learningpackageeditorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992468183574-v09026v7vi7nld0ac84sqgsumie5dqn3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGN_TPnVm5m90JBVQ0X9kNjsgY-qQBmL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992468183574-v09026v7vi7nld0ac84sqgsumie5dqn3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

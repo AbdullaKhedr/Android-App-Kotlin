@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Qatar 2022</string>
-    <string name="stadium_name">Stadium Name</string>
-    <string name="host_city">Host City</string>
-    <string name="status">Status</string>
-    <string name="stadium_picture">Stadium picture</string>
-</resources>

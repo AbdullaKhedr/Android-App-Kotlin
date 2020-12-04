@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor" tools:targetApi="LOLLIPOP">@color/colorPrimaryDark
+        </item>
+    </style>
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/light_gray</item>
+        <item name="android:textColorSecondary">@color/light_gray</item>
+        <item name="android:background">@color/dark_blue</item>
+    </style>
+
+    <style name="BottomBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/light_gray</item>
+        <item name="android:textColorSecondary">@color/dark_blue</item>
+        <item name="android:background">?android:attr/windowBackground</item>
+        <!-- ?android:attr/windowBackground -->
+    </style>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item-->
+<!--        android:id="@+id/app_bar_option_all_pack"-->
+<!--        android:title="All Packages"-->
+<!--        app:showAsAction="never" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/app_bar_option_my_pack"-->
+<!--        android:title="My Packages"-->
+<!--        app:showAsAction="never" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/app_bar_option_other_pack"-->
+<!--        android:title="Other Packages"-->
+<!--        app:showAsAction="never" />-->
+
+    <item
+        android:id="@+id/app_bar_log_out"
+        android:title="@string/logout"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/app_bar_option_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom" />
+</menu>
